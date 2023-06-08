@@ -49,7 +49,6 @@
 
 #littlelink > .button:hover,
 #littlelink > .button:focus {
-  -webkit-filter: brightness(90%);
   filter: brightness(90%);
 }
 
