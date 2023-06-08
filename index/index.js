@@ -28,8 +28,7 @@ circle2.addEventListener('click', function () {
     scrollMain(true);
 });
 
-main.addEventListener('wheel', function (event) { event.preventDefault; scrollMain(event.deltaY > 0); });
-// main.addEventListener('wheel', function (event) { setColor(event.deltaY > 0); }, { passive: true });
+main.addEventListener('wheel', function (event) { setColor(event.deltaY > 0); }, { passive: true });
 
 document.addEventListener('keydown', function (event) {
     if (event.key === 'ArrowDown') {
