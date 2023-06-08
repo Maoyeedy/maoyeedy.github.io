@@ -67,13 +67,12 @@ img {
     padding: 2rem;
     gap: 1rem;
 
-    backdrop-filter: blur(10px);
     box-shadow: 0 0.25rem 1.5rem rgba(0, 0, 0, 0.12);
     border: 1px solid rgba(255, 255, 255, 0.3);
 
-    background: hsl(0 80% 50% / 0.25);
-    background: #00000033;
-    background: #ffffff33;
+    /* backdrop-filter: blur(10px); */
+    /* background: #0003; */
+    background: #fff3;
 }
 
 .container > img {
