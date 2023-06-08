@@ -1,7 +1,7 @@
 :root {
-    --footer-height: 8vh;
-    --body-margin: 2vh;
-    --main-gap: 2vh;
+    --footer-height: 9vh;
+    --body-margin: 3vh;
+    --main-gap: 3vh;
     --corner-radius: 1.5vh;
 
     --duration1: 0.4s;
@@ -48,7 +48,8 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: fade 1s ease-out 0.75s forwards;
+    animation: fade 0.75s ease-out 0.75s forwards;
+    user-select: none;
 }
 
 #warning p {
@@ -78,14 +79,17 @@ body {
     width: 100%;
     display: grid;
     overflow: hidden auto;
-    transition: margin ease var(--duration1);
+    transition: margin var(--duration1);
     scroll-behavior: smooth;
+    scroll-snap-type: block mandatory;
 }
 
 .panel {
     width: 0;
-    transition: width var(--duration1) ease;
+    transition-property: width;
+    transition-duration: var(--duration1);
     display: flex;
+    z-index: 102;
 }
 
 .fill {
@@ -94,13 +98,9 @@ body {
     overflow: hidden auto;
 }
 
-.placeholder {
-    width: var(--main-gap);
-}
-
 .show-right-panel #right {
     width: 35vw;
-    transition-duration: calc(2*var(--duration1));
+    transition-duration: calc(1.5*var(--duration1));
 }
 
 .show-right-panel #main {
@@ -119,6 +119,7 @@ body {
     gap: var(--main-gap);
     width: 100%;
     display: flex;
+    scroll-snap-align: end;
 }
 
 .line > a {
@@ -127,7 +128,7 @@ body {
     position: relative;
     border-radius: var(--corner-radius);
     overflow: hidden;
-    transition: width ease var(--duration1);
+    transition: width var(--duration1);
 }
 
 #line1 > a:hover {
@@ -148,7 +149,7 @@ body {
     -o-object-fit: cover;
     object-fit: cover;
     z-index: 99;
-    transition: transform ease var(--duration1);
+    transition: transform var(--duration1);
     transform: scale(1.1);
 }
 
@@ -162,7 +163,7 @@ body {
     height: 100%;
     background-color: black;
     z-index: 100;
-    transition: opacity ease var(--duration2);
+    transition: opacity var(--duration2);
     opacity: 0;
 }
 
@@ -181,7 +182,7 @@ body {
     font-size: 2rem;
     font-weight: bold;
     color: white;
-    transition: opacity ease var(--duration2);
+    transition: opacity var(--duration2);
     opacity: 0;
 }
 
@@ -197,37 +198,44 @@ body {
 }
 
 #name {
-    color: #93969f;
-    font-weight: 700;
-    font-size: 3.5vh;
+    font-weight: bold;
+    font-size: calc(0.45 * var(--footer-height));
     cursor: pointer;
+    line-height: 2.4;
+    transform: translateY(-2px);
     transition: color var(--duration1);
-
-    /* opacity: 0;
-    animation: fade 1s ease-out 1.25s forwards reverse; */
+    color: #93969f;
 }
 
 #name:hover {
     color: white;
 }
 
-#red-button {
-    width: 4vh;
-    height: 4vh;
-    border-radius: 50%;
+#red-button-placeholder {
+    width: calc(0.5 * var(--footer-height));
+    height: var(--footer-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
+}
+
+#red-button {
+    width: calc(0.5 * var(--footer-height));
+    height: calc(0.5 * var(--footer-height));
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: red;
-    transition: background-color calc(2*var(--duration1));
+    transition: background-color calc(1.5*var(--duration1));
 }
 
-#red-button:hover {
+#red-button-placeholder:hover > #red-button {
     background-color: black;
 }
 
-#red-button img {
+#red-button > img {
     width: 70%;
     transform: translate(-0.5px, -0.5px);
 }
@@ -241,11 +249,11 @@ body {
 }
 
 #circle-group .circle {
-    width: 3vh;
-    height: 3vh;
+    width: calc(0.375 * var(--footer-height));
+    height: calc(0.375 * var(--footer-height));
     border-radius: 50%;
     cursor: pointer;
-    transition: background-color ease var(--duration1);
+    transition: background-color var(--duration1);
 }
 
 #circle1 {
@@ -254,6 +262,23 @@ body {
 
 #circle2 {
     background-color: #93969f;
+}
+
+#left-trigger,
+#right-trigger {
+    width: var(--body-margin);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+
+#left-trigger {
+    left: 0;
+}
+
+#right-trigger {
+    right: 0;
 }
 
 /* @media only screen and (orientation: portrait) {
