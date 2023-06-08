@@ -228,9 +228,7 @@ body {
 }
 
 #red-button img {
-    width: 24px;
-    height: 24px;
-    max-width: 75%;
+    width: 70%;
     transform: translate(-0.5px, -0.5px);
 }
 
