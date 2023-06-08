@@ -19,9 +19,6 @@
 }
 
 img {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
 
@@ -55,7 +52,6 @@ img {
 #warning p {
     color: white;
     font-size: 24px;
-    /* font-family: sans-serif; */
     text-align: center;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
