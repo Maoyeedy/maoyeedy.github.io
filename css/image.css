@@ -36,7 +36,6 @@
 .pinterest img {
     cursor: pointer;
     width: 100%;
-    -o-object-fit: cover;
     object-fit: cover;
 
     border-radius: 1rem;

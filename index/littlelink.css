@@ -23,7 +23,6 @@
 #littlelink > .avatar {
   width: 8vw;
   height: 8vw;
-  -o-object-fit: cover;
   object-fit: cover;
   background-position: center;
   border-radius: 50%;
