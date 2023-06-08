@@ -8,7 +8,7 @@ const leftTrigger = document.getElementById('left-trigger');
 const rightTrigger = document.getElementById('right-trigger');
 const circle1 = document.getElementById('circle1');
 const circle2 = document.getElementById('circle2');
-const scrollPercentage = 45.5 * (window.innerHeight / 100);
+const scrollPercentage = (87 / 2 + 2.5) * (window.innerHeight / 100);
 
 function setColor(isGoingUp) {
     circle1.style.backgroundColor = isGoingUp ? '#93969f' : 'white';
@@ -31,9 +31,9 @@ circle2.addEventListener('click', function () {
 main.addEventListener('wheel', function (event) { setColor(event.deltaY > 0); }, { passive: true });
 
 document.addEventListener('keydown', function (event) {
-    if (event.key === 'ArrowDown') {
+    if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
         scrollMain(true);
-    } else if (event.key === 'ArrowUp') {
+    } else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
         scrollMain(false);
     }
 });
@@ -41,12 +41,17 @@ document.addEventListener('keydown', function (event) {
 //Function
 function toggleLeftPanel() { container.classList.toggle('show-left-panel'); }
 function toggleRightPanel() { container.classList.toggle('show-right-panel'); }
+function openLeftPanel() { container.classList.add('show-left-panel'); }
+function openRightPanel() { container.classList.add('show-right-panel'); }
+function closeLeftPanel() { container.classList.remove('show-left-panel'); }
+function closeRightPanel() { container.classList.remove('show-right-panel'); }
+
+// maoyeedy.addEventListener('click', toggleLeftPanel)
+// button.addEventListener('click', toggleRightPanel)
 maoyeedy.addEventListener('mouseover', toggleLeftPanel);
 maoyeedy.addEventListener('mouseout', toggleLeftPanel);
-// maoyeedy.addEventListener('click', toggleLeftPanel)
 redButton.addEventListener('mouseover', toggleRightPanel);
 redButton.addEventListener('mouseout', toggleRightPanel);
-// button.addEventListener('click', toggleRightPanel)
 leftPanel.addEventListener('mouseover', toggleLeftPanel);
 leftPanel.addEventListener('mouseout', toggleLeftPanel);
 rightPanel.addEventListener('mouseover', toggleRightPanel);
@@ -55,6 +60,7 @@ leftTrigger.addEventListener('mouseover', toggleLeftPanel);
 leftTrigger.addEventListener('mouseout', toggleLeftPanel);
 rightTrigger.addEventListener('mouseover', toggleRightPanel);
 rightTrigger.addEventListener('mouseout', toggleRightPanel);
+
 
 //Function
 function loadDeferContent() {
