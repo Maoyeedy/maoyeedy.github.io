@@ -8,7 +8,7 @@ const leftTrigger = document.getElementById('left-trigger');
 const rightTrigger = document.getElementById('right-trigger');
 const circle1 = document.getElementById('circle1');
 const circle2 = document.getElementById('circle2');
-const scrollPercentage = (87 / 2 + 2.5) * (window.innerHeight / 100);
+const scrollPercentage = ((100 - 5 - 8) / 2 + 2.5) * (window.innerHeight / 100);
 
 function setColor(isGoingUp) {
     circle1.style.backgroundColor = isGoingUp ? '#93969f' : 'white';
@@ -41,10 +41,6 @@ document.addEventListener('keydown', function (event) {
 //Function
 function toggleLeftPanel() { container.classList.toggle('show-left-panel'); }
 function toggleRightPanel() { container.classList.toggle('show-right-panel'); }
-function openLeftPanel() { container.classList.add('show-left-panel'); }
-function openRightPanel() { container.classList.add('show-right-panel'); }
-function closeLeftPanel() { container.classList.remove('show-left-panel'); }
-function closeRightPanel() { container.classList.remove('show-right-panel'); }
 
 // maoyeedy.addEventListener('click', toggleLeftPanel)
 // button.addEventListener('click', toggleRightPanel)
@@ -60,7 +56,6 @@ leftTrigger.addEventListener('mouseover', toggleLeftPanel);
 leftTrigger.addEventListener('mouseout', toggleLeftPanel);
 rightTrigger.addEventListener('mouseover', toggleRightPanel);
 rightTrigger.addEventListener('mouseout', toggleRightPanel);
-
 
 //Function
 function loadDeferContent() {
