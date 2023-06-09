@@ -1,88 +1,95 @@
 #littlelink {
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    opacity: 0;
-    overflow: hidden auto;
-    padding: 1.2rem;
-    transition: opacity .3s ease;
-    width: 20vw
+  transition: opacity ease 0.3s;
+  opacity: 0;
+
+  padding: 1.2rem;
+  overflow: hidden auto;
+  width: 20vw;
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .show-left-panel #littlelink {
-    opacity: 1
+  opacity: 1;
 }
 
 #littlelink > h2 {
-    margin-bottom: .75rem;
-    margin-top: .75rem
+  margin-bottom: 0.75rem;
+  margin-top: 0.75rem;
 }
 
 #littlelink > .avatar {
-    background-position: 50%;
-    border-radius: 50%;
-    height: 8vw;
-    margin-bottom: .75rem;
-    object-fit: cover;
-    width: 8vw
+  width: 8vw;
+  height: 8vw;
+  object-fit: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin-bottom: 0.75rem;
 }
 
 #littlelink > .button {
-    border-radius: .5rem;
-    color: #fff;
-    display: inline-block;
-    height: 3rem;
-    line-height: 3rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    text-decoration: none;
-    width: 100%
+  display: inline-block;
+  height: 3rem;
+  line-height: 3rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+
+  text-decoration: none;
+  text-align: center;
+  color: #ffffff;
 }
 
 #littlelink > .button:last-child {
-    margin: 0
+  margin: 0;
 }
 
-#littlelink > .button:focus,
-#littlelink > .button:hover {
-    filter: brightness(90%)
+#littlelink > .button:hover,
+#littlelink > .button:focus {
+  filter: brightness(90%);
 }
 
 #littlelink .icon {
-    box-sizing: initial;
-    height: 20px;
-    padding: 0 6px 3px 0;
-    vertical-align: middle;
-    width: 20px
+  box-sizing: content-box;
+  padding: 0px 6px 3px 0px;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
 }
 
+/* Brand Styles */
 .button.button-game {
-    background-color: #6637e8
+  background-color: #6637e8;
 }
 
-.button.button-blog,
+.button.button-blog {
+  background-image: linear-gradient(-135deg, #f58529, #dd2a7b, #515bd4);
+}
+
 .button.button-instagram {
-    background-image: linear-gradient(-135deg, #f58529, #dd2a7b, #515bd4)
+  background-image: linear-gradient(-135deg, #f58529, #dd2a7b, #515bd4);
 }
 
 .button.button-github {
-    background-color: #171515
+  background-color: #171515;
 }
 
 .button.button-pinterest {
-    background-color: #ffebed;
-    color: #000 !important
+  background-color: #ffebed;
+  color: black !important;
 }
 
 .button.button-behance {
-    background-color: #1769ff
+  background-color: #1769ff;
 }
 
 .button.button-line {
-    background-color: #06c755
+  background-color: #06c755;
 }
 
 .button.button-mail {
-    background-color: #1e2329;
-    background-color: #e53626
+  background-color: #1e2329;
+  background-color: #e53626;
 }
