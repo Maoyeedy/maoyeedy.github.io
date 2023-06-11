@@ -45,6 +45,7 @@ html {
     align-items: center;
     justify-content: center;
     scroll-snap-align: center;
+    /* ! */
 }
 
 .page > img {
@@ -66,6 +67,7 @@ html {
     padding: 1rem;
     color: white;
     background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 1rem;
 
     opacity: 0;
     transform: translateX(-100%);
@@ -84,4 +86,8 @@ html {
     place-items: start;
     margin: auto;
     max-width: 900px;
+}
+
+.container > img-comparison-slider {
+    scroll-snap-align: center;
 }

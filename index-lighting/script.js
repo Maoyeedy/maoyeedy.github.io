@@ -3,6 +3,9 @@ const observer = new IntersectionObserver((entries) => {
         console.log(entry);
         if (entry.isIntersecting) {
             entry.target.classList.add('show');
+            // if (entry.target === endOfScroll) {
+            //     document.documentElement.style.scrollSnapType = 'none';
+            // }
         }
         else {
             entry.target.classList.remove('show');
@@ -11,4 +14,5 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 const pages = document.querySelectorAll('.page');
+const endOfScroll = document.getElementById('endofscroll')
 pages.forEach((el) => observer.observe(el));
