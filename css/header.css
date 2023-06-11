@@ -8,8 +8,8 @@ header {
 
 nav ul {
     display: flex;
-    list-style: none;
     padding-left: 1em;
+    list-style: none;
 }
 
 nav a {

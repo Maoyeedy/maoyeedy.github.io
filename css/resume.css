@@ -7,12 +7,12 @@ body {
   width: 35vw;
   margin: auto;
   padding: 1.2rem;
+  padding-top: 0.4rem;
   background-color: white;
   color: #0a0d0f;
   border-radius: 2em;
   filter: drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.1));
   line-height: 1.75;
-  padding-top: 0.4rem;
 }
 
 #resume h1 {
@@ -33,9 +33,9 @@ body {
   height: 1px;
   height: 0;
   margin: 1rem 0;
+  margin-top: 0;
   background-color: #b9c0c6;
   border: none;
-  margin-top: 0;
 }
 
 #resume hr:first-of-type {
@@ -45,8 +45,8 @@ body {
 
 #resume ul {
   margin: 0;
-  padding: 0;
   margin-left: 1rem;
+  padding: 0;
   white-space: normal;
 }
 
@@ -70,11 +70,11 @@ body {
 }
 
 #resume .wrapper {
+  margin-top: 0.75rem;
   padding: 0.75rem;
+  padding-top: 0.5rem;
   background-color: aliceblue;
   border-radius: 1rem;
-  margin-top: 0.75rem;
-  padding-top: 0.5rem;
 }
 
 #resume .wrapper>ul {

@@ -2,8 +2,8 @@ body {
   margin: 0;
   background-color: #111;
   color: white;
-  font: 110%/1.5;
   font-family: "overpass", sans-serif;
+  font: 110%/1.5;
 }
 
 html {

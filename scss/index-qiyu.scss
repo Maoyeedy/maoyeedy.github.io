@@ -1,27 +1,27 @@
 body {
-    margin: 0;
-    gap: 2em;
     display: grid;
-    place-items: center;
+    margin: 0;
     background-color: aliceblue;
     color: white;
     font-family: "overpass", sans-serif;
+    gap: 2em;
+    place-items: center;
 }
 
 code,
 pre {
+    background: hsl(0, 0%, 12%);
+    color: hsl(0, 0%, 85%);
     font-family: "Spline Sans Mono", monospace;
     font-size: 0.8rem;
     line-height: 1.5;
-    background: hsl(0, 0%, 12%);
-    color: hsl(0, 0%, 85%);
     overflow: scroll;
     border-radius: 1em;
 }
 
 .right {
-    width: 60ch;
     display: flex;
+    width: 60ch;
     flex-direction: column;
     overflow-y: scroll;
     border-radius: 0 0 1em 1em;
@@ -44,22 +44,22 @@ pre {
 }
 
 .img-code {
-    max-width: 72em;
-    height: 24em;
-    gap: 2em;
-    padding: 2em;
-    border-radius: 2em;
     display: grid;
-    grid-template-columns: auto 1fr;
+    height: 24em;
+    padding: 2em;
     background-color: black;
+    max-width: 72em;
+    gap: 2em;
+    border-radius: 2em;
+    grid-template-columns: auto 1fr;
 }
 
 .img-code>img,
 .img-code>iframe {
     width: 24em;
     height: 100%;
+    background-color: #1F1F1F;
     border-radius: 1em;
     object-fit: cover;
     object-fit: contain;
-    background-color: #1F1F1F;
 }

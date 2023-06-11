@@ -115,9 +115,9 @@ pre.line-numbers>code {
 
 .line-numbers-rows>span:before {
     display: block;
+    padding-right: .7em;
     color: hsl(0, 0%, 85%, 0.35);
     content: counter(linenumber);
-    padding-right: .7em;
     text-align: right;
 }
 
@@ -160,13 +160,13 @@ div.code-toolbar>.toolbar>.toolbar-item>button,
 div.code-toolbar>.toolbar>.toolbar-item>span {
 
     padding: 0 .5em;
+    padding-top: 0.15em;
 
     background: rgba(224, 224, 224, .2);
     color: hsl(0, 0%, 70%);
-    border-radius: .5em;
     font-size: 0.8rem;
     font-weight: normal;
-    padding-top: 0.15em;
+    border-radius: .5em;
     text-decoration: none;
 }
 

@@ -1,8 +1,8 @@
 body {
   margin: 0;
+  margin-bottom: 3rem;
   color: #244376;
   font-family: Google Sans, Noto, Roboto, Helvetica Neue, sans-serif;
-  margin-bottom: 3rem;
 }
 
 model-viewer {
@@ -53,8 +53,8 @@ model-viewer {
 footer {
   display: flex;
   margin: auto;
-  flex-direction: column;
   font-style: italic;
+  flex-direction: column;
   line-height: 1.5;
   max-width: 600px;
   text-align: center;

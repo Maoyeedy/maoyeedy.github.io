@@ -6,8 +6,8 @@ $duration1: 0.4s;
 $duration2: 0.8s;
 
 ::selection {
-    color: white;
     background: red;
+    color: white;
     text-shadow: none;
 }
 
@@ -22,8 +22,8 @@ $duration2: 0.8s;
 }
 
 img {
-    user-select: none;
     -webkit-user-select: none;
+    user-select: none;
     max-width: 100%;
     object-fit: cover;
 }
@@ -49,13 +49,14 @@ body {
     align-items: center;
     justify-content: center;
     animation: fade 0.75s ease-out 0.75s forwards;
-    user-select: none;
+    -webkit-user-select: none;
+            user-select: none;
 
     p {
         color: white;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
         font-size: 22px;
         text-align: center;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     }
 }
 
@@ -73,14 +74,14 @@ body {
 
 #container {
     display: flex;
-    height: calc(100vh - #{$body-margin} - #{$footer-height});
     width: 100%;
+    height: calc(100vh - #{$body-margin} - #{$footer-height});
 }
 
 #main {
     display: grid;
-    gap: #{$main-gap};
     width: 100%;
+    gap: #{$main-gap};
     overflow: hidden auto;
     transition: margin $duration1;
     scroll-behavior: smooth;
@@ -133,8 +134,8 @@ body {
 
 .line {
     display: flex;
-    gap: #{$main-gap};
     width: 100%;
+    gap: #{$main-gap};
     scroll-snap-align: end;
 
     >a {
@@ -184,12 +185,12 @@ body {
         position: absolute;
         width: 100%;
         height: 100%;
+        color: white;
+        font-size: 2.4rem;
+        font-weight: bold;
         justify-content: center;
         align-items: center;
         z-index: 101;
-        font-size: 2.4rem;
-        font-weight: bold;
-        color: white;
         transition: opacity $duration2;
         opacity: 0;
     }
@@ -211,19 +212,19 @@ body {
 
 #footer {
     display: flex;
+    height: #{$footer-height};
     align-items: center;
     justify-content: space-between;
-    height: #{$footer-height};
 }
 
 #name {
-    font-weight: bold;
+    color: #93969f;
     font-size: calc(0.45 * #{$footer-height});
+    font-weight: bold;
     cursor: pointer;
     line-height: 2.4;
     transform: translateY(-2px);
     transition: color $duration1;
-    color: #93969f;
 
     &:hover {
         color: white;
@@ -243,10 +244,10 @@ body {
     display: flex;
     width: calc(0.5 * #{$footer-height});
     height: calc(0.5 * #{$footer-height});
+    background-color: red;
     border-radius: 50%;
     justify-content: center;
     align-items: center;
-    background-color: red;
     transition: background-color 1.5 * $duration1;
 }
 
@@ -301,14 +302,14 @@ body {
 }
 
 #resume {
+    width: 35vw;
+    padding: 1.2rem;
+    padding-top: 0.4rem;
+    background-color: white;
+    color: #0a0d0f;
     transition: opacity ease 0.3s;
     opacity: 0;
     line-height: 1.75;
-    padding: 1.2rem;
-    padding-top: 0.4rem;
-    width: 35vw;
-    color: #0a0d0f;
-    background-color: white;
 }
 
 #resume {
@@ -334,12 +335,12 @@ body {
     }
 
     hr {
-        border: none;
-        background-color: #b9c0c6;
         height: 1px;
-        margin: 1rem 0;
         height: 0;
+        margin: 1rem 0;
         margin-top: 0;
+        background-color: #b9c0c6;
+        border: none;
 
         &:first-of-type {
             height: 1px;
@@ -368,16 +369,17 @@ body {
             height: 12px;
             margin-right: 4px;
             transform: translate(0, 1px);
-            user-select: none;
+            -webkit-user-select: none;
+                    user-select: none;
         }
     }
 
     .wrapper {
         margin-top: 0.75rem;
-        background-color: aliceblue;
-        border-radius: 1rem;
         padding: 0.75rem;
         padding-top: 0.5rem;
+        background-color: aliceblue;
+        border-radius: 1rem;
 
         ul {
             margin-top: 0.25rem;
@@ -397,41 +399,41 @@ body {
 
 #littlelink {
     display: flex;
+    width: 20vw;
+    padding: 1.2rem;
+    background-color: white;
     transition: opacity ease 0.3s;
     opacity: 0;
-    padding: 1.2rem;
     overflow: hidden auto;
-    width: 20vw;
-    background-color: white;
     flex-direction: column;
 }
 
 #littlelink {
     > {
         h2 {
-            margin-bottom: 0.75rem;
             margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
         }
 
         .avatar {
             width: 8vw;
             height: 8vw;
+            margin-bottom: 0.75rem;
             object-fit: cover;
             background-position: center;
             border-radius: 50%;
-            margin-bottom: 0.75rem;
         }
 
         .button {
             display: inline-block;
-            height: 3rem;
-            line-height: 3rem;
             width: 100%;
-            border-radius: 0.5rem;
+            height: 3rem;
             margin-bottom: 1rem;
+            color: #ffffff;
+            line-height: 3rem;
+            border-radius: 0.5rem;
             text-decoration: none;
             text-align: center;
-            color: #ffffff;
 
             &:last-child {
                 margin: 0;
@@ -445,11 +447,11 @@ body {
     }
 
     .icon {
-        box-sizing: content-box;
-        padding: 0px 6px 3px 0px;
-        vertical-align: middle;
         width: 20px;
         height: 20px;
+        padding: 0px 6px 3px 0px;
+        box-sizing: content-box;
+        vertical-align: middle;
     }
 }
 
