@@ -2,8 +2,8 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 99;
     width: 100%;
+    z-index: 99;
 }
 
 nav ul {
@@ -13,10 +13,10 @@ nav ul {
 }
 
 nav a {
+    color: #222;
+    font-weight: 700;
     margin: 0em 0.5em;
     text-decoration: none;
-    font-weight: 700;
-    color: #222;
 }
 
 nav a:hover {

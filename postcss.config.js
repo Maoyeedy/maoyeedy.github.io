@@ -12,7 +12,7 @@ module.exports = {
                 'at-rules',
                 'rules',
             ],
-            'properties-order': 'alphabetical',
+            "properties-order": ["display", "position", "top", "right", "bottom", "left", "width", "height", "margin", "padding", "background", "background-color", "color"],
             'unspecified-properties-position': 'bottom',
         }),
     ],

@@ -1,12 +1,12 @@
 ::selection {
-    color: white;
     background: red;
+    color: white;
     text-shadow: none;
 }
 
 * {
-    scrollbar-width: none;
     box-sizing: border-box;
+    scrollbar-width: none;
 }
 
 ::-webkit-scrollbar {
@@ -15,17 +15,17 @@
 }
 
 body {
-    margin: 0;
-    font-family: 'Overpass', system-ui, -apple-system, sans-serif;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Overpass', system-ui, -apple-system, sans-serif;
+    margin: 0;
 }
 
 h1,
 h3 {
-    margin: 0;
     line-height: 1;
+    margin: 0;
 }
 
 h1 {
@@ -39,8 +39,8 @@ h3 {
 }
 
 p {
-    margin: 0;
     line-height: 1.5;
+    margin: 0;
 }
 
 a {
@@ -48,10 +48,10 @@ a {
 }
 
 img {
-    user-select: none;
-    -webkit-user-select: none;
     max-width: 100%;
     object-fit: cover;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 audio,

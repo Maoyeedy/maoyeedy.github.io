@@ -16,8 +16,8 @@ img-comparison-slider.rendered [slot='second'] {
 
 img-comparison-slider:focus {
     --default-handle-opacity: 0;
-    outline: none;
     box-shadow: none;
+    outline: none;
 }
 
 .before,
@@ -29,11 +29,12 @@ img-comparison-slider:focus {
 .after>figcaption {
     position: absolute;
     bottom: 10px;
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
     background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(4px);
     border-radius: 0.75em;
-    line-height: 50%;
     font-size: 1.2em;
+    line-height: 50%;
     padding: 0.75em;
     padding-bottom: 0.6em;
 }

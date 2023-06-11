@@ -1,30 +1,30 @@
 body {
   display: grid;
-  margin: 0;
-  gap: 2em;
-  place-items: center;
   background-color: aliceblue;
   color: white;
   font-family: "overpass", sans-serif;
+  gap: 2em;
+  margin: 0;
+  place-items: center;
 }
 
 code,
 pre {
+  background: hsl(0, 0%, 12%);
+  border-radius: 1em;
+  color: hsl(0, 0%, 85%);
   font-family: "Spline Sans Mono", monospace;
   font-size: 0.8rem;
   line-height: 1.5;
-  background: hsl(0, 0%, 12%);
-  color: hsl(0, 0%, 85%);
   overflow: scroll;
-  border-radius: 1em;
 }
 
 .right {
   display: flex;
   width: 60ch;
+  border-radius: 0 0 1em 1em;
   flex-direction: column;
   overflow-y: scroll;
-  border-radius: 0 0 1em 1em;
 }
 
 .right h1 {
@@ -33,9 +33,9 @@ pre {
 }
 
 .right p {
+  line-height: 150%;
   margin: 0;
   margin-bottom: 1em;
-  line-height: 150%;
 }
 
 .right a {
@@ -45,21 +45,21 @@ pre {
 
 .img-code {
   display: grid;
-  max-width: 72em;
   height: 24em;
-  gap: 2em;
-  padding: 2em;
-  border-radius: 2em;
-  grid-template-columns: auto 1fr;
   background-color: black;
+  border-radius: 2em;
+  gap: 2em;
+  grid-template-columns: auto 1fr;
+  max-width: 72em;
+  padding: 2em;
 }
 
 .img-code>img,
 .img-code>iframe {
   width: 24em;
   height: 100%;
+  background-color: #1F1F1F;
   border-radius: 1em;
   object-fit: cover;
   object-fit: contain;
-  background-color: #1F1F1F;
 }

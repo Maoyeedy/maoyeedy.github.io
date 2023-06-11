@@ -9,17 +9,17 @@
 }
 
 pre {
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-    word-wrap: normal;
-    tab-size: 4;
     -webkit-hyphens: none;
     hyphens: none;
+    margin: 0;
 
     padding: .5em .5em;
-    margin: 0;
+    tab-size: 4;
+    text-align: left;
+    white-space: pre;
+    word-break: normal;
+    word-spacing: normal;
+    word-wrap: normal;
 }
 
 .token.cdata,
@@ -102,10 +102,10 @@ pre.line-numbers>code {
     position: absolute;
     top: 0;
     left: -3.6em;
-    pointer-events: none;
     width: 3em;
-    letter-spacing: -1px;
     border-right: 1px solid hsla(0, 0%, 85%, 0.35);
+    letter-spacing: -1px;
+    pointer-events: none;
     translate: 0 -2px;
 }
 
@@ -115,10 +115,10 @@ pre.line-numbers>code {
 
 .line-numbers-rows>span:before {
     display: block;
-    content: counter(linenumber);
-    text-align: right;
-    padding-right: .7em;
     color: hsl(0, 0%, 85%, 0.35);
+    content: counter(linenumber);
+    padding-right: .7em;
+    text-align: right;
 }
 
 div.code-toolbar {
@@ -129,9 +129,9 @@ div.code-toolbar>.toolbar {
     position: absolute;
     top: .4em;
     right: .4em;
-    z-index: 10;
-    transition: opacity .3s ease-in-out;
     opacity: 0;
+    transition: opacity .3s ease-in-out;
+    z-index: 10;
 }
 
 div.code-toolbar:hover>.toolbar,
@@ -158,16 +158,16 @@ div.code-toolbar>.toolbar>.toolbar-item>button {
 div.code-toolbar>.toolbar>.toolbar-item>a,
 div.code-toolbar>.toolbar>.toolbar-item>button,
 div.code-toolbar>.toolbar>.toolbar-item>span {
-    text-decoration: none;
-    font-size: 0.8rem;
 
     background: rgba(224, 224, 224, .2);
     border-radius: .5em;
     color: hsl(0, 0%, 70%);
+    font-size: 0.8rem;
     font-weight: normal;
 
     padding: 0 .5em;
     padding-top: 0.15em;
+    text-decoration: none;
 }
 
 div.code-toolbar>.toolbar>.toolbar-item>a:focus,

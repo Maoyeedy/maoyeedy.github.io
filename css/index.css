@@ -1,12 +1,12 @@
 ::selection {
-  color: white;
   background: red;
+  color: white;
   text-shadow: none;
 }
 
 * {
-  scrollbar-width: none;
   box-sizing: border-box;
+  scrollbar-width: none;
 }
 
 ::-webkit-scrollbar {
@@ -15,19 +15,19 @@
 }
 
 img {
-  user-select: none;
-  -webkit-user-select: none;
   max-width: 100%;
   object-fit: cover;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 body {
   height: calc(100vh - 2.5vh);
-  margin: 2.5vh;
-  margin-bottom: 0;
   background-color: #202124;
   color: black;
   font-family: "Barlow", sans-serif;
+  margin: 2.5vh;
+  margin-bottom: 0;
 }
 
 #warning {
@@ -37,20 +37,20 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: black;
-  z-index: 10001;
   align-items: center;
-  justify-content: center;
   animation: fade 0.75s ease-out 0.75s forwards;
+  background-color: black;
+  justify-content: center;
   -webkit-user-select: none;
   user-select: none;
+  z-index: 10001;
 }
 
 #warning p {
   color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 22px;
   text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 @keyframes fade {
@@ -67,25 +67,25 @@ body {
 
 #container {
   display: flex;
-  height: calc(100vh - 2.5vh - 8vh);
   width: 100%;
+  height: calc(100vh - 2.5vh - 8vh);
 }
 
 #main {
   display: grid;
-  gap: 2.5vh;
   width: 100%;
+  gap: 2.5vh;
   overflow: hidden auto;
-  transition: margin 0.4s;
   scroll-behavior: smooth;
   scroll-snap-type: block mandatory;
+  transition: margin 0.4s;
 }
 
 .panel {
   display: flex;
   width: 0;
-  transition-property: width;
   transition-duration: 0.4s;
+  transition-property: width;
   z-index: 102;
 }
 
@@ -123,8 +123,8 @@ body {
 
 .line {
   display: flex;
-  gap: 2.5vh;
   width: 100%;
+  gap: 2.5vh;
   scroll-snap-align: end;
 }
 
@@ -153,9 +153,9 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 99;
-  transition: transform 0.4s;
   transform: scale(1.1);
+  transition: transform 0.4s;
+  z-index: 99;
 }
 
 .line>a>.layer {
@@ -163,9 +163,9 @@ body {
   width: 100%;
   height: 100%;
   background-color: black;
-  z-index: 100;
-  transition: opacity 0.8s;
   opacity: 0;
+  transition: opacity 0.8s;
+  z-index: 100;
 }
 
 .line>a>.text-layer {
@@ -173,14 +173,14 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  justify-content: center;
   align-items: center;
-  z-index: 101;
+  color: white;
   font-size: 2.4rem;
   font-weight: bold;
-  color: white;
-  transition: opacity 0.8s;
+  justify-content: center;
   opacity: 0;
+  transition: opacity 0.8s;
+  z-index: 101;
 }
 
 .line>a:hover>img {
@@ -197,19 +197,19 @@ body {
 
 #footer {
   display: flex;
+  height: 8vh;
   align-items: center;
   justify-content: space-between;
-  height: 8vh;
 }
 
 #name {
-  font-weight: bold;
-  font-size: calc(0.45 * 8vh);
+  color: #93969f;
   cursor: pointer;
+  font-size: calc(0.45 * 8vh);
+  font-weight: bold;
   line-height: 2.4;
   transform: translateY(-2px);
   transition: color 0.4s;
-  color: #93969f;
 }
 
 #name:hover {
@@ -220,19 +220,19 @@ body {
   display: flex;
   width: calc(0.5 * 8vh);
   height: 8vh;
-  justify-content: center;
   align-items: center;
   cursor: pointer;
+  justify-content: center;
 }
 
 #red-button {
   display: flex;
   width: calc(0.5 * 8vh);
   height: calc(0.5 * 8vh);
-  border-radius: 50%;
-  justify-content: center;
   align-items: center;
   background-color: red;
+  border-radius: 50%;
+  justify-content: center;
   transition: background-color 0.6s;
 }
 
@@ -249,8 +249,8 @@ body {
   display: flex;
   position: absolute;
   left: 50%;
-  transform: translate(-50%, 0%);
   gap: calc(0.1875 * 8vh);
+  transform: translate(-50%, 0%);
 }
 
 #circle-group .circle {
@@ -287,24 +287,24 @@ body {
 }
 
 #resume {
-  transition: opacity ease 0.3s;
-  opacity: 0;
+  width: 35vw;
+  background-color: white;
+  color: #0a0d0f;
   line-height: 1.75;
+  opacity: 0;
   padding: 1.2rem;
   padding-top: 0.4rem;
-  width: 35vw;
-  color: #0a0d0f;
-  background-color: white;
+  transition: opacity ease 0.3s;
 }
 
 #resume h1 {
-  margin: 0;
   font-size: 2rem;
+  margin: 0;
 }
 
 #resume h2 {
-  margin: 0;
   line-height: 1;
+  margin: 0;
 }
 
 #resume p {
@@ -314,16 +314,16 @@ body {
 #resume #contact,
 #resume h1,
 #resume h2 {
-  text-align: center;
   justify-content: center;
+  text-align: center;
 }
 
 #resume hr {
-  border: none;
-  background-color: #b9c0c6;
   height: 1px;
-  margin: 1rem 0;
   height: 0;
+  background-color: #b9c0c6;
+  border: none;
+  margin: 1rem 0;
   margin-top: 0;
 }
 
@@ -341,8 +341,8 @@ body {
 
 #resume #contact {
   display: flex;
-  gap: 12px;
   flex-wrap: wrap;
+  gap: 12px;
 }
 
 #resume #contact p {
@@ -359,9 +359,9 @@ body {
 }
 
 #resume .wrapper {
-  margin-top: 0.75rem;
   background-color: aliceblue;
   border-radius: 1rem;
+  margin-top: 0.75rem;
   padding: 0.75rem;
   padding-top: 0.5rem;
 }
@@ -376,19 +376,19 @@ body {
 
 #resume .justified {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 #littlelink {
   display: flex;
-  transition: opacity ease 0.3s;
-  opacity: 0;
-  padding: 1.2rem;
-  overflow: hidden auto;
   width: 20vw;
   background-color: white;
   flex-direction: column;
+  opacity: 0;
+  overflow: hidden auto;
+  padding: 1.2rem;
+  transition: opacity ease 0.3s;
 }
 
 #littlelink>h2 {
@@ -399,22 +399,22 @@ body {
 #littlelink>.avatar {
   width: 8vw;
   height: 8vw;
-  object-fit: cover;
   background-position: center;
   border-radius: 50%;
   margin-bottom: 0.75rem;
+  object-fit: cover;
 }
 
 #littlelink>.button {
   display: inline-block;
-  height: 3rem;
-  line-height: 3rem;
   width: 100%;
+  height: 3rem;
   border-radius: 0.5rem;
-  margin-bottom: 1rem;
-  text-decoration: none;
-  text-align: center;
   color: #ffffff;
+  line-height: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-decoration: none;
 }
 
 #littlelink>.button:last-child {
@@ -427,11 +427,11 @@ body {
 }
 
 #littlelink .icon {
+  width: 20px;
+  height: 20px;
   box-sizing: content-box;
   padding: 0px 6px 3px 0px;
   vertical-align: middle;
-  width: 20px;
-  height: 20px;
 }
 
 .button.button-game {

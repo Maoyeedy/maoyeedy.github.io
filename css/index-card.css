@@ -1,24 +1,24 @@
 body {
-  font-family: "Barlow", sans-serif;
   background-image: url(/img/placeholderBG/5.avif);
+  font-family: "Barlow", sans-serif;
   margin: 2em;
 }
 
 .container-thin {
   display: grid;
-  max-width: 550px;
   align-items: center;
-  margin: auto;
-  gap: 1rem;
-  padding: 2rem;
-  border-radius: 2rem;
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
-  box-shadow: 0 0.25rem 1.5rem rgba(0, 0, 0, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.3);
   background: hsla(0, 80%, 50%, 0.25);
   background: rgba(0, 0, 0, 0.2);
   background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 2rem;
+  box-shadow: 0 0.25rem 1.5rem rgba(0, 0, 0, 0.12);
+  gap: 1rem;
+  margin: auto;
+  max-width: 550px;
+  padding: 2rem;
 }
 
 .container-thin>img {

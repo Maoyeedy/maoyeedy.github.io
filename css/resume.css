@@ -4,25 +4,25 @@ body {
 }
 
 #resume {
-  filter: drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.1));
-  margin: auto;
+  width: 35vw;
+  background-color: white;
   border-radius: 2em;
+  color: #0a0d0f;
+  filter: drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.1));
   line-height: 1.75;
+  margin: auto;
   padding: 1.2rem;
   padding-top: 0.4rem;
-  width: 35vw;
-  color: #0a0d0f;
-  background-color: white;
 }
 
 #resume h1 {
-  margin: 0;
   font-size: 2rem;
+  margin: 0;
 }
 
 #resume h2 {
-  margin: 0;
   line-height: 1;
+  margin: 0;
 }
 
 #resume p {
@@ -30,11 +30,11 @@ body {
 }
 
 #resume hr {
-  border: none;
-  background-color: #b9c0c6;
   height: 1px;
-  margin: 1rem 0;
   height: 0;
+  background-color: #b9c0c6;
+  border: none;
+  margin: 1rem 0;
   margin-top: 0;
 }
 
@@ -52,8 +52,8 @@ body {
 
 #resume #contact {
   display: flex;
-  gap: 12px;
   flex-wrap: wrap;
+  gap: 12px;
 }
 
 #resume #contact p {
@@ -70,9 +70,9 @@ body {
 }
 
 #resume .wrapper {
-  margin-top: 0.75rem;
   background-color: aliceblue;
   border-radius: 1rem;
+  margin-top: 0.75rem;
   padding: 0.75rem;
   padding-top: 0.5rem;
 }
@@ -87,13 +87,13 @@ body {
 
 #resume .justified {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 #resume #contact,
 #resume h1,
 #resume h2 {
-  text-align: center;
   justify-content: center;
+  text-align: center;
 }
