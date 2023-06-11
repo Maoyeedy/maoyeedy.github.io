@@ -14,6 +14,6 @@
 		"scss-optimize": "postcss scss/*.scss -d scss/",
 		"update": "sass --update scss:css",
 		"build": "postcss css/*.css --use cssnano --no-map -d build/",
-		"uglify": "uglifyjs-folder js -x .js -eo build"
+		"uglify": "uglifyjs-folder js -x .js -eo build --config-file \"./uglify.json\""
 	}
 }
