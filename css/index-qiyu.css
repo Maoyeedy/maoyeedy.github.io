@@ -1,18 +1,18 @@
 body {
   display: grid;
+  margin: 0;
   background-color: aliceblue;
   color: white;
   font-family: "overpass", sans-serif;
   gap: 2em;
-  margin: 0;
   place-items: center;
 }
 
 code,
 pre {
   background: hsl(0, 0%, 12%);
-  border-radius: 1em;
   color: hsl(0, 0%, 85%);
+  border-radius: 1em;
   font-family: "Spline Sans Mono", monospace;
   font-size: 0.8rem;
   line-height: 1.5;
@@ -33,8 +33,8 @@ pre {
 }
 
 .right p {
-  line-height: 150%;
   margin: 0;
+  line-height: 150%;
   margin-bottom: 1em;
 }
 
@@ -46,12 +46,12 @@ pre {
 .img-code {
   display: grid;
   height: 24em;
+  padding: 2em;
   background-color: black;
   border-radius: 2em;
   gap: 2em;
   grid-template-columns: auto 1fr;
   max-width: 72em;
-  padding: 2em;
 }
 
 .img-code>img,

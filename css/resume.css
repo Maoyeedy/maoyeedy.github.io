@@ -1,28 +1,28 @@
 body {
-  font-family: "barlow", sans-serif;
   margin: 2rem;
+  font-family: "barlow", sans-serif;
 }
 
 #resume {
   width: 35vw;
-  background-color: white;
-  border-radius: 2em;
-  color: #0a0d0f;
-  filter: drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.1));
-  line-height: 1.75;
   margin: auto;
   padding: 1.2rem;
+  background-color: white;
+  color: #0a0d0f;
+  border-radius: 2em;
+  filter: drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.1));
+  line-height: 1.75;
   padding-top: 0.4rem;
 }
 
 #resume h1 {
-  font-size: 2rem;
   margin: 0;
+  font-size: 2rem;
 }
 
 #resume h2 {
-  line-height: 1;
   margin: 0;
+  line-height: 1;
 }
 
 #resume p {
@@ -32,9 +32,9 @@ body {
 #resume hr {
   height: 1px;
   height: 0;
+  margin: 1rem 0;
   background-color: #b9c0c6;
   border: none;
-  margin: 1rem 0;
   margin-top: 0;
 }
 
@@ -45,8 +45,8 @@ body {
 
 #resume ul {
   margin: 0;
-  margin-left: 1rem;
   padding: 0;
+  margin-left: 1rem;
   white-space: normal;
 }
 
@@ -70,10 +70,10 @@ body {
 }
 
 #resume .wrapper {
+  padding: 0.75rem;
   background-color: aliceblue;
   border-radius: 1rem;
   margin-top: 0.75rem;
-  padding: 0.75rem;
   padding-top: 0.5rem;
 }
 

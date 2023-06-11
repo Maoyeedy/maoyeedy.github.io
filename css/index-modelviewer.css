@@ -1,7 +1,7 @@
 body {
+  margin: 0;
   color: #244376;
   font-family: Google Sans, Noto, Roboto, Helvetica Neue, sans-serif;
-  margin: 0;
   margin-bottom: 3rem;
 }
 
@@ -26,19 +26,19 @@ model-viewer {
 
 .card {
   display: flex;
+  margin: 3em auto;
   border-radius: 6px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
   flex-direction: column;
-  margin: 3em auto;
   max-width: 600px;
   overflow: hidden;
 }
 
 .attribution {
   display: flex;
+  margin: 1em;
   flex-direction: row;
   justify-content: space-between;
-  margin: 1em;
 }
 
 .attribution h1 {
@@ -52,10 +52,10 @@ model-viewer {
 
 footer {
   display: flex;
+  margin: auto;
   flex-direction: column;
   font-style: italic;
   line-height: 1.5;
-  margin: auto;
   max-width: 600px;
   text-align: center;
 }

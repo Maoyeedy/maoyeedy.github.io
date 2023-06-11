@@ -9,11 +9,11 @@
 }
 
 pre {
-    -webkit-hyphens: none;
-    hyphens: none;
     margin: 0;
 
     padding: .5em .5em;
+    -webkit-hyphens: none;
+    hyphens: none;
     tab-size: 4;
     text-align: left;
     white-space: pre;
@@ -144,13 +144,13 @@ div.code-toolbar>.toolbar>.toolbar-item {
 }
 
 div.code-toolbar>.toolbar>.toolbar-item>button {
+    padding: 0;
     background: 0 0;
-    border: 0;
     color: inherit;
+    border: 0;
     font: inherit;
     line-height: normal;
     overflow: visible;
-    padding: 0;
     -webkit-user-select: none;
     user-select: none;
 }
@@ -159,13 +159,13 @@ div.code-toolbar>.toolbar>.toolbar-item>a,
 div.code-toolbar>.toolbar>.toolbar-item>button,
 div.code-toolbar>.toolbar>.toolbar-item>span {
 
+    padding: 0 .5em;
+
     background: rgba(224, 224, 224, .2);
-    border-radius: .5em;
     color: hsl(0, 0%, 70%);
+    border-radius: .5em;
     font-size: 0.8rem;
     font-weight: normal;
-
-    padding: 0 .5em;
     padding-top: 0.15em;
     text-decoration: none;
 }
