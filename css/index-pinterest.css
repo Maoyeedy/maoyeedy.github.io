@@ -24,7 +24,6 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
-
 .pinterest .column {
   display: flex;
   flex-direction: column;
@@ -47,4 +46,4 @@
 .pinterest img:hover {
   transform: scale(1.0125);
   filter: drop-shadow(0 0.25rem 1rem rgba(0, 0, 0, 0.24));
-}
+}/*# sourceMappingURL=index-pinterest.css.map */

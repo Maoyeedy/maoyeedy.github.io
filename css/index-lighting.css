@@ -23,10 +23,10 @@ html {
   background-size: cover;
   scroll-snap-align: center;
 }
-.homepage > .text {
+.homepage .text {
   z-index: 1;
 }
-.homepage > .overlay {
+.homepage .overlay {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -83,4 +83,4 @@ html {
 }
 .container > img-comparison-slider {
   scroll-snap-align: center;
-}
+}/*# sourceMappingURL=index-lighting.css.map */
