@@ -4,8 +4,6 @@ module.exports = {
         require('cssnano')({
             preset: 'default',
         }),
-        // require('@fullhuman/postcss-purgecss')({
-        //     content: ['./index.html']
-        // })
+        // require('postcss-nested'),
     ],
 };
