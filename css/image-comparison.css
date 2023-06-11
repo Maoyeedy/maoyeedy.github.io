@@ -15,9 +15,9 @@ img-comparison-slider.rendered [slot='second'] {
 }
 
 img-comparison-slider:focus {
+    --default-handle-opacity: 0;
     outline: none;
     box-shadow: none;
-    --default-handle-opacity: 0;
 }
 
 .before,
@@ -25,12 +25,12 @@ img-comparison-slider:focus {
     margin: 0;
 }
 
-.before > figcaption,
-.after > figcaption {
-    background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(4px);
+.before>figcaption,
+.after>figcaption {
     position: absolute;
     bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
     border-radius: 0.75em;
     line-height: 50%;
     font-size: 1.2em;
@@ -38,10 +38,10 @@ img-comparison-slider:focus {
     padding-bottom: 0.6em;
 }
 
-.before > figcaption {
+.before>figcaption {
     left: 10px;
 }
 
-.after > figcaption {
+.after>figcaption {
     right: 10px;
 }

@@ -1,6 +1,6 @@
 .container-image {
-  max-width: 1000px;
   display: flex;
+  max-width: 1000px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -24,7 +24,8 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
-.pinterest > .column {
+
+.pinterest>.column {
   display: flex;
   flex-direction: column;
   gap: 1rem;
