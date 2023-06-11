@@ -10,10 +10,10 @@
 		"uglifyjs-folder": "^3.2.0"
 	},
 	"scripts": {
-		"css-optimize": "postcss css/*.css -d css/",
-		"scss-optimize": "postcss scss/*.scss -d scss/",
-		"update": "sass --update scss:css",
-		"build": "postcss css/*.css --use cssnano --no-map -d build/",
+		"optimize-css": "postcss css/*.css -d css/",
+		"optimize-scss": "postcss scss/*.scss -d scss/",
+		"build": "sass --update scss:css",
+		"postcss": "postcss css/*.css --use cssnano --no-map -d build/",
 		"uglify": "uglifyjs-folder js -x .js -eo build --config-file \"./uglify.json\""
 	}
 }

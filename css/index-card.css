@@ -2,6 +2,7 @@ body {
   margin: 2em;
   font-family: "Barlow", sans-serif;
   background-image: url(/img/placeholderBG/5.avif);
+  color: white;
 }
 
 .container-thin {
@@ -23,3 +24,5 @@ body {
 .container-thin > img {
   border-radius: 1rem;
 }
+
+/*# sourceMappingURL=index-card.css.map */
