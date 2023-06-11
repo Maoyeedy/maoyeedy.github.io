@@ -5,7 +5,7 @@ img.forEach((image) => {
 
 const anchors = document.querySelectorAll('a');
 anchors.forEach((anchor) => {
-    anchor.target = '_blank';
+    // anchor.target = '_blank';
     anchor.rel = 'noopener';
     anchor.draggable = false;
 });
