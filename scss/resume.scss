@@ -1,18 +1,18 @@
 body {
-    font-family: "barlow", sans-serif;
     margin: 2rem;
+    font-family: "barlow", sans-serif;
 }
 
 #resume {
-    filter: drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.1));
+    width: 35vw;
     margin: auto;
-    border-radius: 2em;
-    line-height: 1.75;
     padding: 1.2rem;
     padding-top: 0.4rem;
-    width: 35vw;
-    color: #0a0d0f;
     background-color: white;
+    color: #0a0d0f;
+    filter: drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.1));
+    border-radius: 2em;
+    line-height: 1.75;
 
     h1 {
         margin: 0;
@@ -29,12 +29,12 @@ body {
     }
 
     hr {
-        border: none;
-        background-color: #b9c0c6;
         height: 1px;
-        margin: 1rem 0;
         height: 0;
+        margin: 1rem 0;
         margin-top: 0;
+        background-color: #b9c0c6;
+        border: none;
 
         &:first-of-type {
             height: 1px;
@@ -70,10 +70,10 @@ body {
 
     .wrapper {
         margin-top: 0.75rem;
-        background-color: aliceblue;
-        border-radius: 1rem;
         padding: 0.75rem;
         padding-top: 0.5rem;
+        background-color: aliceblue;
+        border-radius: 1rem;
 
         &>ul {
             margin-top: 0.25rem;
