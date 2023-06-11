@@ -93,7 +93,7 @@ pre.line-numbers {
     padding-left: 3.6em;
 }
 
-pre.line-numbers > code {
+pre.line-numbers>code {
     position: relative;
     white-space: inherit
 }
@@ -109,11 +109,11 @@ pre.line-numbers > code {
     translate: 0 -2px;
 }
 
-.line-numbers-rows > span {
+.line-numbers-rows>span {
     counter-increment: linenumber;
 }
 
-.line-numbers-rows > span:before {
+.line-numbers-rows>span:before {
     content: counter(linenumber);
     display: block;
     text-align: right;
@@ -125,7 +125,7 @@ div.code-toolbar {
     position: relative
 }
 
-div.code-toolbar > .toolbar {
+div.code-toolbar>.toolbar {
     position: absolute;
     z-index: 10;
     top: .4em;
@@ -134,16 +134,16 @@ div.code-toolbar > .toolbar {
     opacity: 0
 }
 
-div.code-toolbar:hover > .toolbar,
-div.code-toolbar:focus-within > .toolbar {
+div.code-toolbar:hover>.toolbar,
+div.code-toolbar:focus-within>.toolbar {
     opacity: 1
 }
 
-div.code-toolbar > .toolbar > .toolbar-item {
+div.code-toolbar>.toolbar>.toolbar-item {
     display: inline-block
 }
 
-div.code-toolbar > .toolbar > .toolbar-item > button {
+div.code-toolbar>.toolbar>.toolbar-item>button {
     background: 0 0;
     border: 0;
     color: inherit;
@@ -155,9 +155,9 @@ div.code-toolbar > .toolbar > .toolbar-item > button {
     user-select: none;
 }
 
-div.code-toolbar > .toolbar > .toolbar-item > a,
-div.code-toolbar > .toolbar > .toolbar-item > button,
-div.code-toolbar > .toolbar > .toolbar-item > span {
+div.code-toolbar>.toolbar>.toolbar-item>a,
+div.code-toolbar>.toolbar>.toolbar-item>button,
+div.code-toolbar>.toolbar>.toolbar-item>span {
     text-decoration: none;
     font-size: 0.8rem;
 
@@ -170,11 +170,11 @@ div.code-toolbar > .toolbar > .toolbar-item > span {
     padding-top: 0.15em;
 }
 
-div.code-toolbar > .toolbar > .toolbar-item > a:focus,
-div.code-toolbar > .toolbar > .toolbar-item > a:hover,
-div.code-toolbar > .toolbar > .toolbar-item > button:focus,
-div.code-toolbar > .toolbar > .toolbar-item > button:hover,
-div.code-toolbar > .toolbar > .toolbar-item > span:focus,
-div.code-toolbar > .toolbar > .toolbar-item > span:hover {
+div.code-toolbar>.toolbar>.toolbar-item>a:focus,
+div.code-toolbar>.toolbar>.toolbar-item>a:hover,
+div.code-toolbar>.toolbar>.toolbar-item>button:focus,
+div.code-toolbar>.toolbar>.toolbar-item>button:hover,
+div.code-toolbar>.toolbar>.toolbar-item>span:focus,
+div.code-toolbar>.toolbar>.toolbar-item>span:hover {
     color: hsl(0, 0%, 95%);
 }

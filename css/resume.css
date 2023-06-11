@@ -1,0 +1,85 @@
+body {
+  font-family: "barlow", sans-serif;
+  margin: 2rem;
+}
+
+#resume {
+  margin: auto;
+  border-radius: 2em;
+  line-height: 1.75;
+  padding: 1.2rem;
+  padding-top: 0.4rem;
+  width: 35vw;
+  color: #0a0d0f;
+  background-color: white;
+}
+#resume h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+#resume h2 {
+  margin: 0;
+  line-height: 1;
+}
+#resume p {
+  margin: 0;
+}
+#resume hr {
+  border: none;
+  background-color: #b9c0c6;
+  height: 1px;
+  margin: 1rem 0;
+  height: 0;
+  margin-top: 0;
+}
+#resume hr:first-of-type {
+  height: 1px;
+  margin-top: 1rem;
+}
+#resume ul {
+  margin: 0;
+  margin-left: 1rem;
+  padding: 0;
+  white-space: normal;
+}
+#resume #contact {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+#resume #contact p {
+  line-height: 1;
+}
+#resume #contact img {
+  width: 12px;
+  height: 12px;
+  margin-right: 4px;
+  transform: translate(0, 1px);
+  -webkit-user-select: none;
+  user-select: none;
+}
+#resume .wrapper {
+  margin-top: 0.75rem;
+  background-color: aliceblue;
+  border-radius: 1rem;
+  padding: 0.75rem;
+  padding-top: 0.5rem;
+}
+#resume .wrapper > ul {
+  margin-top: 0.25rem;
+}
+#resume .wrapper > #skills {
+  margin-top: 0;
+}
+#resume .justified {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#resume #contact,
+#resume h1,
+#resume h2 {
+  text-align: center;
+  justify-content: center;
+}

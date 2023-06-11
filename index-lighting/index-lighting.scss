@@ -90,7 +90,7 @@ html {
     margin: auto;
     max-width: 900px;
 
-    >img-comparison-slider {
+    &>img-comparison-slider {
         scroll-snap-align: center;
     }
 }

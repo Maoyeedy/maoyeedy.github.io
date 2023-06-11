@@ -12,6 +12,16 @@ model-viewer {
   --poster-color: #ffffff00;
 }
 
+.card {
+  margin: 3em auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
 .card1 > model-viewer {
   background-color: #244376;
 }
@@ -22,16 +32,6 @@ model-viewer {
 
 .card3 > model-viewer {
   background-color: hsl(214, 62%, 50%);
-}
-
-.card {
-  margin: 3em auto;
-  display: flex;
-  flex-direction: column;
-  max-width: 600px;
-  border-radius: 6px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
-  overflow: hidden;
 }
 
 .attribution {

@@ -22,7 +22,7 @@ img {
 }
 
 body {
-  height: calc(100vh - 2.5vh);
+  height: 97.5vh;
   margin: 2.5vh;
   margin-bottom: 0;
   background-color: #202124;
@@ -43,7 +43,7 @@ body {
   justify-content: center;
   animation: fade 0.75s ease-out 0.75s forwards;
   -webkit-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 #warning p {
   color: white;
@@ -64,7 +64,7 @@ body {
 }
 #container {
   display: flex;
-  height: calc(100vh - 2.5vh - 8vh);
+  height: 89.5vh;
   width: 100%;
 }
 
@@ -123,24 +123,11 @@ body {
 .line > a {
   position: relative;
   width: 100%;
-  height: calc((100vh - 2.5vh - 8vh - 2.5vh) / 2);
+  height: 43.5vh;
   border-radius: 1.5vh;
   overflow: hidden;
   transition: width 0.4s;
 }
-
-#line1 > a:hover {
-  width: 185%;
-}
-
-#line2 > a:hover {
-  width: 125%;
-}
-
-#line3 > a:hover {
-  width: 100%;
-}
-
 .line > a > img {
   width: 100%;
   height: 100%;
@@ -182,6 +169,18 @@ body {
   opacity: 1;
 }
 
+#line1 > a:hover {
+  width: 185%;
+}
+
+#line2 > a:hover {
+  width: 125%;
+}
+
+#line3 > a:hover {
+  width: 100%;
+}
+
 #footer {
   display: flex;
   align-items: center;
@@ -191,7 +190,7 @@ body {
 
 #name {
   font-weight: bold;
-  font-size: calc(0.45 * 8vh);
+  font-size: 3.6vh;
   cursor: pointer;
   line-height: 2.4;
   transform: translateY(-2px);
@@ -202,33 +201,31 @@ body {
   color: white;
 }
 
-#red-button-placeholder {
-  display: flex;
-  width: calc(0.5 * 8vh);
-  height: 8vh;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
 #red-button {
   display: flex;
-  width: calc(0.5 * 8vh);
-  height: calc(0.5 * 8vh);
+  width: 4vh;
+  height: 4vh;
   border-radius: 50%;
   justify-content: center;
   align-items: center;
   background-color: red;
   transition: background-color 0.6s;
 }
-
-#red-button-placeholder:hover > #red-button {
-  background-color: black;
-}
-
 #red-button > img {
   width: 70%;
   transform: translate(-0.5px, -0.5px);
+}
+
+#red-button-placeholder {
+  display: flex;
+  width: 4vh;
+  height: 8vh;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#red-button-placeholder:hover > #red-button {
+  background-color: black;
 }
 
 #circle-group {
@@ -236,11 +233,11 @@ body {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0%);
-  gap: calc(0.1875 * 8vh);
+  gap: 1.5vh;
 }
 #circle-group .circle {
-  width: calc(0.375 * 8vh);
-  height: calc(0.375 * 8vh);
+  width: 3vh;
+  height: 3vh;
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.4s;
@@ -281,7 +278,6 @@ body {
   color: #0a0d0f;
   background-color: white;
 }
-
 #resume h1 {
   margin: 0;
   font-size: 2rem;
@@ -292,12 +288,6 @@ body {
 }
 #resume p {
   margin: 0;
-}
-#resume #contact,
-#resume h1,
-#resume h2 {
-  text-align: center;
-  justify-content: center;
 }
 #resume hr {
   border: none;
@@ -331,7 +321,7 @@ body {
   margin-right: 4px;
   transform: translate(0, 1px);
   -webkit-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 #resume .wrapper {
   margin-top: 0.75rem;
@@ -352,6 +342,13 @@ body {
   flex-wrap: wrap;
 }
 
+#resume #contact,
+#resume h1,
+#resume h2 {
+  text-align: center;
+  justify-content: center;
+}
+
 #littlelink {
   display: flex;
   transition: opacity ease 0.3s;
@@ -362,7 +359,6 @@ body {
   background-color: white;
   flex-direction: column;
 }
-
 #littlelink > h2 {
   margin-bottom: 0.75rem;
   margin-top: 0.75rem;
@@ -389,9 +385,6 @@ body {
 #littlelink > .button:last-child {
   margin: 0;
 }
-#littlelink > .button:hover, #littlelink > .button:focus {
-  filter: brightness(90%);
-}
 #littlelink .icon {
   box-sizing: content-box;
   padding: 0px 6px 3px 0px;
@@ -400,11 +393,12 @@ body {
   height: 20px;
 }
 
+#littlelink > .button:hover, #littlelink > .button:focus {
+  filter: brightness(90%);
+}
+
 .button.button-game {
   background-color: #6637e8;
-}
-.button.button-blog, .button.button-instagram {
-  background-image: linear-gradient(-135deg, #f58529, #dd2a7b, #515bd4);
 }
 .button.button-github {
   background-color: #171515;
@@ -422,4 +416,8 @@ body {
 .button.button-mail {
   background-color: #1e2329;
   background-color: #e53626;
+}
+
+.button.button-blog, .button.button-instagram {
+  background-image: linear-gradient(-135deg, #f58529, #dd2a7b, #515bd4);
 }

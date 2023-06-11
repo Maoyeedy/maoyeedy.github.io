@@ -1,0 +1,339 @@
+::selection
+    color: white
+    background: red
+    text-shadow: none
+*
+    scrollbar-width: none
+    box-sizing: border-box
+::-webkit-scrollbar
+    width: 0
+    height: 0
+img
+    user-select: none
+    -webkit-user-select: none
+    max-width: 100%
+    object-fit: cover
+
+body
+    height: calc(100vh - 2.5vh)
+    margin: 2.5vh
+    margin-bottom: 0
+    background-color: #202124
+    color: black
+    font-family: "Barlow", sans-serif
+
+#warning
+    display: flex
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: black
+    z-index: 10001
+    align-items: center
+    justify-content: center
+    animation: fade 0.75s ease-out 0.75s forwards
+    -webkit-user-select: none
+    user-select: none
+    p
+        color: white
+        font-size: 22px
+        text-align: center
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif
+
+@keyframes fade
+    from
+        opacity: 1
+        visibility: visible
+    to
+        opacity: 0
+        visibility: hidden
+
+#container
+    display: flex
+    height: calc(100vh - 2.5vh - 8vh)
+    width: 100%
+#main
+    display: grid
+    gap: 2.5vh
+    width: 100%
+    overflow: hidden auto
+    transition: margin 0.4s
+    scroll-behavior: smooth
+    scroll-snap-type: block mandatory
+.panel
+    display: flex
+    width: 0
+    transition-property: width
+    transition-duration: 0.4s
+    z-index: 102
+.fill
+    width: 100%
+    border-radius: 1.5vh
+    overflow: hidden auto
+
+.show-left-panel
+    #left
+        width: 20vw
+    #main
+        margin-left: 2.5vh
+    #littlelink
+        opacity: 1
+.show-right-panel
+    #right
+        width: 35vw
+        transition-duration: 0.6s
+    #main
+        margin-right: 2.5vh
+    #resume
+        opacity: 1
+        transition-duration: 0.7s
+
+.line
+    display: flex
+    gap: 2.5vh
+    width: 100%
+    scroll-snap-align: end
+    & > a
+        position: relative
+        width: 100%
+        height: calc((100vh - 2.5vh - 8vh - 2.5vh) / 2)
+        border-radius: 1.5vh
+        overflow: hidden
+        transition: width 0.4s
+        & > img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            z-index: 99
+            transition: transform 0.4s
+            transform: scale(1.1)
+        & > .layer
+            position: absolute
+            width: 100%
+            height: 100%
+            background-color: black
+            z-index: 100
+            transition: opacity 0.8s
+            opacity: 0
+        & > .text-layer
+            display: flex
+            position: absolute
+            width: 100%
+            height: 100%
+            justify-content: center
+            align-items: center
+            z-index: 101
+            font-size: 2.4rem
+            font-weight: bold
+            color: white
+            transition: opacity 0.8s
+            opacity: 0
+        &:hover
+            & > img
+                transform: scale(1)
+            & > .layer
+                opacity: 0.4
+            & > .text-layer
+                opacity: 1
+#line1
+    & > a
+        &:hover
+            width: 185%
+#line2
+    & > a
+        &:hover
+            width: 125%
+#line3
+    & > a
+        &:hover
+            width: 100%
+
+#footer
+    display: flex
+    align-items: center
+    justify-content: space-between
+    height: 8vh
+#name
+    font-weight: bold
+    font-size: calc(0.45 * 8vh)
+    cursor: pointer
+    line-height: 2.4
+    transform: translateY(-2px)
+    transition: color 0.4s
+    color: #93969f
+    &:hover
+        color: white
+#red-button
+    display: flex
+    width: calc(0.5 * 8vh)
+    height: calc(0.5 * 8vh)
+    border-radius: 50%
+    justify-content: center
+    align-items: center
+    background-color: red
+    transition: background-color 0.6s
+    & > img
+        width: 70%
+        transform: translate(-0.5px, -0.5px)
+#red-button-placeholder
+    display: flex
+    width: calc(0.5 * 8vh)
+    height: 8vh
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    &:hover
+        & > #red-button
+            background-color: black
+#circle-group
+    display: flex
+    position: absolute
+    left: 50%
+    transform: translate(-50%, 0%)
+    gap: calc(0.1875 * 8vh)
+    .circle
+        width: calc(0.375 * 8vh)
+        height: calc(0.375 * 8vh)
+        border-radius: 50%
+        cursor: pointer
+        transition: background-color 0.4s
+#circle1
+    background-color: white
+#circle2
+    background-color: #93969f
+
+#left-trigger,
+#right-trigger
+    position: fixed
+    top: 0
+    width: 2.5vh
+    height: 100vh
+    z-index: -1
+#left-trigger
+    left: 0
+#right-trigger
+    right: 0
+
+#resume
+    transition: opacity ease 0.3s
+    opacity: 0
+    line-height: 1.75
+    padding: 1.2rem
+    padding-top: 0.4rem
+    width: 35vw
+    color: #0a0d0f
+    background-color: white
+    h1
+        margin: 0
+        font-size: 2rem
+    h2
+        margin: 0
+        line-height: 1
+    p
+        margin: 0
+    hr
+        border: none
+        background-color: #b9c0c6
+        height: 1px
+        margin: 1rem 0
+        height: 0
+        margin-top: 0
+        &:first-of-type
+            height: 1px
+            margin-top: 1rem
+    ul
+        margin: 0
+        margin-left: 1rem
+        padding: 0
+        white-space: normal
+    #contact
+        display: flex
+        gap: 12px
+        flex-wrap: wrap
+        p
+            line-height: 1
+        img
+            width: 12px
+            height: 12px
+            margin-right: 4px
+            transform: translate(0, 1px)
+            -webkit-user-select: none
+            user-select: none
+    .wrapper
+        margin-top: 0.75rem
+        background-color: aliceblue
+        border-radius: 1rem
+        padding: 0.75rem
+        padding-top: 0.5rem
+        ul
+            margin-top: 0.25rem
+    #skills
+        margin-top: 0
+    .justified
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+#resume #contact,
+#resume h1,
+#resume h2
+    text-align: center
+    justify-content: center
+
+#littlelink
+    display: flex
+    transition: opacity ease 0.3s
+    opacity: 0
+    padding: 1.2rem
+    overflow: hidden auto
+    width: 20vw
+    background-color: white
+    flex-direction: column
+    & > h2
+        margin-bottom: 0.75rem
+        margin-top: 0.75rem
+    & > .avatar
+        width: 8vw
+        height: 8vw
+        object-fit: cover
+        background-position: center
+        border-radius: 50%
+        margin-bottom: 0.75rem
+    & > .button
+        display: inline-block
+        height: 3rem
+        line-height: 3rem
+        width: 100%
+        border-radius: 0.5rem
+        margin-bottom: 1rem
+        text-decoration: none
+        text-align: center
+        color: #ffffff
+        &:last-child
+            margin: 0
+    .icon
+        box-sizing: content-box
+        padding: 0px 6px 3px 0px
+        vertical-align: middle
+        width: 20px
+        height: 20px
+#littlelink > .button:hover, #littlelink > .button:focus
+    filter: brightness(90%)
+.button
+    &.button-game
+        background-color: #6637e8
+    &.button-github
+        background-color: #171515
+    &.button-pinterest
+        background-color: #ffebed
+        color: black !important
+    &.button-behance
+        background-color: #1769ff
+    &.button-line
+        background-color: #06c755
+    &.button-mail
+        background-color: #1e2329
+        background-color: #e53626
+.button.button-blog, .button.button-instagram
+    background-image: linear-gradient(-135deg, #f58529, #dd2a7b, #515bd4)
