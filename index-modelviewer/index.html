@@ -10,18 +10,18 @@
   <link rel="stylesheet" href="/global/global.css">
   <script async src="/global/global.js"></script>
 
-  <script async src="/dist/es-module-shims.js"></script>
+  <script async src="/lib/es-module-shims.js"></script>
   <link rel="stylesheet" href="/css/index-modelviewer.css">
   <script type="importmap">
         {
           "imports": {
-            "three": "/dist/three.module.min.js"
+            "three": "/lib/three.module.min.js"
           }
         }
       </script>
-  <script type="module" src="/dist/model-viewer-no-three.min.js"></script>
-  <script type="module" src="/dist/model-viewer-effects.min.js"></script>
-  <!-- <script async src="https://ga.jspm.io/npm:es-module-shims@1.7.1/dist/es-module-shims.js"></script>
+  <script type="module" src="/lib/model-viewer-no-three.min.js"></script>
+  <script type="module" src="/lib/model-viewer-effects.min.js"></script>
+  <!-- <script async src="https://ga.jspm.io/npm:es-module-shims@1.7.1/lib/es-module-shims.js"></script>
       <script type="importmap">
         {
           "imports": {
@@ -29,8 +29,8 @@
           }
         }
       </script>
-      <script type="module" src="https://cdn.jsdelivr.net/npm/@beilinson/model-viewer@3.1.6/dist/model-viewer-no-three.min.js"></script>
-      <script type="module" src="https://cdn.jsdelivr.net/npm/@beilinson/model-viewer-effects@1.0.0/dist/model-viewer-effects.min.js"></script> -->
+      <script type="module" src="https://cdn.jsdelivr.net/npm/@beilinson/model-viewer@3.1.6/lib/model-viewer-no-three.min.js"></script>
+      <script type="module" src="https://cdn.jsdelivr.net/npm/@beilinson/model-viewer-effects@1.0.0/lib/model-viewer-effects.min.js"></script> -->
 </head>
 
 <body>
@@ -95,7 +95,7 @@
 
   <script>
     self.ModelViewerElement = self.ModelViewerElement || {};
-    self.ModelViewerElement.meshoptDecoderLocation = "/dist/meshopt_decoder.min.js";
+    self.ModelViewerElement.meshoptDecoderLocation = "/lib/meshopt_decoder.min.js";
     // self.ModelViewerElement.meshoptDecoderLocation = 'https://cdn.jsdelivr.net/npm/meshoptimizer@0.19.0/meshopt_decoder.min.js';
   </script>
 </body>
