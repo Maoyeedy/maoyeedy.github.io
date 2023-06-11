@@ -1,11 +1,9 @@
-:root {
-    --footer-height: 8vh;
-    --body-margin: 2.5vh;
-    --main-gap: 2.5vh;
-    --corner-radius: 1.5vh;
-    --duration1: 0.4s;
-    --duration2: 0.8s;
-}
+$footer-height: 8vh;
+$body-margin: 2.5vh;
+$main-gap: 2.5vh;
+$corner-radius: 1.5vh;
+$duration1: 0.4s;
+$duration2: 0.8s;
 
 ::selection {
     color: white;
@@ -31,8 +29,8 @@ img {
 }
 
 body {
-    height: calc(100vh - var(--body-margin));
-    margin: var(--body-margin);
+    height: calc(100vh - #{$body-margin});
+    margin: #{$body-margin};
     margin-bottom: 0;
     background-color: #202124;
     color: black;
@@ -40,6 +38,7 @@ body {
 }
 
 #warning {
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
@@ -47,7 +46,6 @@ body {
     height: 100%;
     background-color: black;
     z-index: 10001;
-    display: flex;
     align-items: center;
     justify-content: center;
     animation: fade 0.75s ease-out 0.75s forwards;
@@ -74,32 +72,32 @@ body {
 }
 
 #container {
-    height: calc(100vh - var(--body-margin) - var(--footer-height));
-    width: 100%;
     display: flex;
+    height: calc(100vh - #{$body-margin} - #{$footer-height});
+    width: 100%;
 }
 
 #main {
-    gap: var(--main-gap);
-    width: 100%;
     display: grid;
+    gap: #{$main-gap};
+    width: 100%;
     overflow: hidden auto;
-    transition: margin var(--duration1);
+    transition: margin $duration1;
     scroll-behavior: smooth;
     scroll-snap-type: block mandatory;
 }
 
 .panel {
+    display: flex;
     width: 0;
     transition-property: width;
-    transition-duration: var(--duration1);
-    display: flex;
+    transition-duration: $duration1;
     z-index: 102;
 }
 
 .fill {
     width: 100%;
-    border-radius: var(--corner-radius);
+    border-radius: #{$corner-radius};
     overflow: hidden auto;
 }
 
@@ -109,7 +107,7 @@ body {
     }
 
     #main {
-        margin-left: var(--main-gap);
+        margin-left: #{$main-gap};
     }
 
     #littlelink {
@@ -120,11 +118,11 @@ body {
 .show-right-panel {
     #right {
         width: 35vw;
-        transition-duration: calc(1.5 * var(--duration1));
+        transition-duration: 1.5 * $duration1;
     }
 
     #main {
-        margin-right: var(--main-gap);
+        margin-right: #{$main-gap};
     }
 
     #resume {
@@ -134,18 +132,18 @@ body {
 }
 
 .line {
-    gap: var(--main-gap);
-    width: 100%;
     display: flex;
+    gap: #{$main-gap};
+    width: 100%;
     scroll-snap-align: end;
 
     >a {
-        width: 100%;
-        height: calc((100vh - var(--body-margin) - var(--footer-height) - var(--main-gap)) / 2);
         position: relative;
-        border-radius: var(--corner-radius);
+        width: 100%;
+        height: calc((100vh - #{$body-margin} - #{$footer-height} - #{$main-gap}) / 2);
+        border-radius: #{$corner-radius};
         overflow: hidden;
-        transition: width var(--duration1);
+        transition: width $duration1;
     }
 }
 
@@ -167,8 +165,33 @@ body {
         height: 100%;
         object-fit: cover;
         z-index: 99;
-        transition: transform var(--duration1);
+        transition: transform $duration1;
         transform: scale(1.1);
+    }
+
+    >.layer {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        z-index: 100;
+        transition: opacity $duration2;
+        opacity: 0;
+    }
+
+    >.text-layer {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        z-index: 101;
+        font-size: 2.4rem;
+        font-weight: bold;
+        color: white;
+        transition: opacity $duration2;
+        opacity: 0;
     }
 
     &:hover {
@@ -184,47 +207,22 @@ body {
             opacity: 1;
         }
     }
-
-    >.layer {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: black;
-        z-index: 100;
-        transition: opacity var(--duration2);
-        opacity: 0;
-    }
-
-    >.text-layer {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 101;
-        font-size: 2.4rem;
-        font-weight: bold;
-        color: white;
-        transition: opacity var(--duration2);
-        opacity: 0;
-    }
 }
 
 #footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: var(--footer-height);
+    height: #{$footer-height};
 }
 
 #name {
     font-weight: bold;
-    font-size: calc(0.45 * var(--footer-height));
+    font-size: calc(0.45 * #{$footer-height});
     cursor: pointer;
     line-height: 2.4;
     transform: translateY(-2px);
-    transition: color var(--duration1);
+    transition: color $duration1;
     color: #93969f;
 
     &:hover {
@@ -233,23 +231,23 @@ body {
 }
 
 #red-button-placeholder {
-    width: calc(0.5 * var(--footer-height));
-    height: var(--footer-height);
     display: flex;
+    width: calc(0.5 * #{$footer-height});
+    height: #{$footer-height};
     justify-content: center;
     align-items: center;
     cursor: pointer;
 }
 
 #red-button {
-    width: calc(0.5 * var(--footer-height));
-    height: calc(0.5 * var(--footer-height));
-    border-radius: 50%;
     display: flex;
+    width: calc(0.5 * #{$footer-height});
+    height: calc(0.5 * #{$footer-height});
+    border-radius: 50%;
     justify-content: center;
     align-items: center;
     background-color: red;
-    transition: background-color calc(1.5 * var(--duration1));
+    transition: background-color 1.5 * $duration1;
 }
 
 #red-button-placeholder:hover>#red-button {
@@ -262,18 +260,18 @@ body {
 }
 
 #circle-group {
+    display: flex;
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0%);
-    display: flex;
-    gap: calc(0.1875 * var(--footer-height));
+    gap: calc(0.1875 * #{$footer-height});
 
     .circle {
-        width: calc(0.375 * var(--footer-height));
-        height: calc(0.375 * var(--footer-height));
+        width: calc(0.375 * #{$footer-height});
+        height: calc(0.375 * #{$footer-height});
         border-radius: 50%;
         cursor: pointer;
-        transition: background-color var(--duration1);
+        transition: background-color $duration1;
     }
 }
 
@@ -287,10 +285,10 @@ body {
 
 #left-trigger,
 #right-trigger {
-    width: var(--body-margin);
-    height: 100vh;
     position: fixed;
     top: 0;
+    width: #{$body-margin};
+    height: 100vh;
     z-index: -1;
 }
 
@@ -398,13 +396,13 @@ body {
 }
 
 #littlelink {
+    display: flex;
     transition: opacity ease 0.3s;
     opacity: 0;
     padding: 1.2rem;
     overflow: hidden auto;
     width: 20vw;
     background-color: white;
-    display: flex;
     flex-direction: column;
 }
 

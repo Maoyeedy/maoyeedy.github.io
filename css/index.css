@@ -1,12 +1,3 @@
-:root {
-  --footer-height: 8vh;
-  --body-margin: 2.5vh;
-  --main-gap: 2.5vh;
-  --corner-radius: 1.5vh;
-  --duration1: 0.4s;
-  --duration2: 0.8s;
-}
-
 ::selection {
   color: white;
   background: red;
@@ -31,8 +22,8 @@ img {
 }
 
 body {
-  height: calc(100vh - var(--body-margin));
-  margin: var(--body-margin);
+  height: calc(100vh - 2.5vh);
+  margin: 2.5vh;
   margin-bottom: 0;
   background-color: #202124;
   color: black;
@@ -40,6 +31,7 @@ body {
 }
 
 #warning {
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
@@ -47,14 +39,12 @@ body {
   height: 100%;
   background-color: black;
   z-index: 10001;
-  display: flex;
   align-items: center;
   justify-content: center;
   animation: fade 0.75s ease-out 0.75s forwards;
   -webkit-user-select: none;
-  user-select: none;
+          user-select: none;
 }
-
 #warning p {
   color: white;
   font-size: 22px;
@@ -67,207 +57,193 @@ body {
     opacity: 1;
     visibility: visible;
   }
-
   to {
     opacity: 0;
     visibility: hidden;
   }
 }
-
 #container {
-  height: calc(100vh - var(--body-margin) - var(--footer-height));
-  width: 100%;
   display: flex;
+  height: calc(100vh - 2.5vh - 8vh);
+  width: 100%;
 }
 
 #main {
-  gap: var(--main-gap);
-  width: 100%;
   display: grid;
+  gap: 2.5vh;
+  width: 100%;
   overflow: hidden auto;
-  transition: margin var(--duration1);
+  transition: margin 0.4s;
   scroll-behavior: smooth;
   scroll-snap-type: block mandatory;
 }
 
 .panel {
+  display: flex;
   width: 0;
   transition-property: width;
-  transition-duration: var(--duration1);
-  display: flex;
+  transition-duration: 0.4s;
   z-index: 102;
 }
 
 .fill {
   width: 100%;
-  border-radius: var(--corner-radius);
+  border-radius: 1.5vh;
   overflow: hidden auto;
 }
 
 .show-left-panel #left {
   width: 20vw;
 }
-
 .show-left-panel #main {
-  margin-left: var(--main-gap);
+  margin-left: 2.5vh;
 }
-
 .show-left-panel #littlelink {
   opacity: 1;
 }
 
 .show-right-panel #right {
   width: 35vw;
-  transition-duration: calc(1.5 * var(--duration1));
+  transition-duration: 0.6s;
 }
-
 .show-right-panel #main {
-  margin-right: var(--main-gap);
+  margin-right: 2.5vh;
 }
-
 .show-right-panel #resume {
   opacity: 1;
   transition-duration: 0.7s;
 }
 
 .line {
-  gap: var(--main-gap);
-  width: 100%;
   display: flex;
+  gap: 2.5vh;
+  width: 100%;
   scroll-snap-align: end;
 }
-
-.line>a {
-  width: 100%;
-  height: calc((100vh - var(--body-margin) - var(--footer-height) - var(--main-gap)) / 2);
+.line > a {
   position: relative;
-  border-radius: var(--corner-radius);
+  width: 100%;
+  height: calc((100vh - 2.5vh - 8vh - 2.5vh) / 2);
+  border-radius: 1.5vh;
   overflow: hidden;
-  transition: width var(--duration1);
+  transition: width 0.4s;
 }
 
-#line1>a:hover {
+#line1 > a:hover {
   width: 185%;
 }
 
-#line2>a:hover {
+#line2 > a:hover {
   width: 125%;
 }
 
-#line3>a:hover {
+#line3 > a:hover {
   width: 100%;
 }
 
-.line>a>img {
+.line > a > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: 99;
-  transition: transform var(--duration1);
+  transition: transform 0.4s;
   transform: scale(1.1);
 }
-
-.line>a:hover>img {
-  transform: scale(1);
-}
-
-.line>a:hover>.layer {
-  opacity: 0.4;
-}
-
-.line>a:hover>.text-layer {
-  opacity: 1;
-}
-
-.line>a>.layer {
+.line > a > .layer {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: black;
   z-index: 100;
-  transition: opacity var(--duration2);
+  transition: opacity 0.8s;
   opacity: 0;
 }
-
-.line>a>.text-layer {
+.line > a > .text-layer {
+  display: flex;
   position: absolute;
   width: 100%;
   height: 100%;
-  display: flex;
   justify-content: center;
   align-items: center;
   z-index: 101;
   font-size: 2.4rem;
   font-weight: bold;
   color: white;
-  transition: opacity var(--duration2);
+  transition: opacity 0.8s;
   opacity: 0;
+}
+.line > a:hover > img {
+  transform: scale(1);
+}
+.line > a:hover > .layer {
+  opacity: 0.4;
+}
+.line > a:hover > .text-layer {
+  opacity: 1;
 }
 
 #footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: var(--footer-height);
+  height: 8vh;
 }
 
 #name {
   font-weight: bold;
-  font-size: calc(0.45 * var(--footer-height));
+  font-size: calc(0.45 * 8vh);
   cursor: pointer;
   line-height: 2.4;
   transform: translateY(-2px);
-  transition: color var(--duration1);
+  transition: color 0.4s;
   color: #93969f;
 }
-
 #name:hover {
   color: white;
 }
 
 #red-button-placeholder {
-  width: calc(0.5 * var(--footer-height));
-  height: var(--footer-height);
   display: flex;
+  width: calc(0.5 * 8vh);
+  height: 8vh;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
 
 #red-button {
-  width: calc(0.5 * var(--footer-height));
-  height: calc(0.5 * var(--footer-height));
-  border-radius: 50%;
   display: flex;
+  width: calc(0.5 * 8vh);
+  height: calc(0.5 * 8vh);
+  border-radius: 50%;
   justify-content: center;
   align-items: center;
   background-color: red;
-  transition: background-color calc(1.5 * var(--duration1));
+  transition: background-color 0.6s;
 }
 
-#red-button-placeholder:hover>#red-button {
+#red-button-placeholder:hover > #red-button {
   background-color: black;
 }
 
-#red-button>img {
+#red-button > img {
   width: 70%;
   transform: translate(-0.5px, -0.5px);
 }
 
 #circle-group {
+  display: flex;
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0%);
-  display: flex;
-  gap: calc(0.1875 * var(--footer-height));
+  gap: calc(0.1875 * 8vh);
 }
-
 #circle-group .circle {
-  width: calc(0.375 * var(--footer-height));
-  height: calc(0.375 * var(--footer-height));
+  width: calc(0.375 * 8vh);
+  height: calc(0.375 * 8vh);
   border-radius: 50%;
   cursor: pointer;
-  transition: background-color var(--duration1);
+  transition: background-color 0.4s;
 }
 
 #circle1 {
@@ -280,10 +256,10 @@ body {
 
 #left-trigger,
 #right-trigger {
-  width: var(--body-margin);
-  height: 100vh;
   position: fixed;
   top: 0;
+  width: 2.5vh;
+  height: 100vh;
   z-index: -1;
 }
 
@@ -310,23 +286,19 @@ body {
   margin: 0;
   font-size: 2rem;
 }
-
 #resume h2 {
   margin: 0;
   line-height: 1;
 }
-
 #resume p {
   margin: 0;
 }
-
 #resume #contact,
 #resume h1,
 #resume h2 {
   text-align: center;
   justify-content: center;
 }
-
 #resume hr {
   border: none;
   background-color: #b9c0c6;
@@ -335,38 +307,32 @@ body {
   height: 0;
   margin-top: 0;
 }
-
 #resume hr:first-of-type {
   height: 1px;
   margin-top: 1rem;
 }
-
 #resume ul {
   margin: 0;
   margin-left: 1rem;
   padding: 0;
   white-space: normal;
 }
-
 #resume #contact {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
 }
-
 #resume #contact p {
   line-height: 1;
 }
-
 #resume #contact img {
   width: 12px;
   height: 12px;
   margin-right: 4px;
   transform: translate(0, 1px);
   -webkit-user-select: none;
-  user-select: none;
+          user-select: none;
 }
-
 #resume .wrapper {
   margin-top: 0.75rem;
   background-color: aliceblue;
@@ -374,15 +340,12 @@ body {
   padding: 0.75rem;
   padding-top: 0.5rem;
 }
-
 #resume .wrapper ul {
   margin-top: 0.25rem;
 }
-
 #resume #skills {
   margin-top: 0;
 }
-
 #resume .justified {
   display: flex;
   justify-content: space-between;
@@ -390,22 +353,21 @@ body {
 }
 
 #littlelink {
+  display: flex;
   transition: opacity ease 0.3s;
   opacity: 0;
   padding: 1.2rem;
   overflow: hidden auto;
   width: 20vw;
   background-color: white;
-  display: flex;
   flex-direction: column;
 }
 
-#littlelink>h2 {
+#littlelink > h2 {
   margin-bottom: 0.75rem;
   margin-top: 0.75rem;
 }
-
-#littlelink>.avatar {
+#littlelink > .avatar {
   width: 8vw;
   height: 8vw;
   object-fit: cover;
@@ -413,8 +375,7 @@ body {
   border-radius: 50%;
   margin-bottom: 0.75rem;
 }
-
-#littlelink>.button {
+#littlelink > .button {
   display: inline-block;
   height: 3rem;
   line-height: 3rem;
@@ -425,16 +386,12 @@ body {
   text-align: center;
   color: #ffffff;
 }
-
-#littlelink>.button:last-child {
+#littlelink > .button:last-child {
   margin: 0;
 }
-
-#littlelink>.button:hover,
-#littlelink>.button:focus {
+#littlelink > .button:hover, #littlelink > .button:focus {
   filter: brightness(90%);
 }
-
 #littlelink .icon {
   box-sizing: content-box;
   padding: 0px 6px 3px 0px;
@@ -446,29 +403,22 @@ body {
 .button.button-game {
   background-color: #6637e8;
 }
-
-.button.button-blog,
-.button.button-instagram {
+.button.button-blog, .button.button-instagram {
   background-image: linear-gradient(-135deg, #f58529, #dd2a7b, #515bd4);
 }
-
 .button.button-github {
   background-color: #171515;
 }
-
 .button.button-pinterest {
   background-color: #ffebed;
   color: black !important;
 }
-
 .button.button-behance {
   background-color: #1769ff;
 }
-
 .button.button-line {
   background-color: #06c755;
 }
-
 .button.button-mail {
   background-color: #1e2329;
   background-color: #e53626;

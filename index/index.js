@@ -14,7 +14,7 @@ function setColor(isGoingUp) {
     circle1.style.backgroundColor = isGoingUp ? '#93969f' : 'white';
     circle2.style.backgroundColor = isGoingUp ? 'white' : '#93969f';
 }
-
+// hah
 function scrollMain(isGoingUp) {
     main.scrollTop += isGoingUp ? scrollPercentage : -1 * scrollPercentage;
     setColor(isGoingUp);
