@@ -5,11 +5,15 @@
 		"postcss": "^8.4.24",
 		"postcss-cli": "^10.1.0",
 		"postcss-scss": "^4.0.6",
-		"postcss-sorting": "^8.0.2"
+		"postcss-sorting": "^8.0.2",
+		"uglify-js": "^3.17.4",
+		"uglifyjs-folder": "^3.2.0"
 	},
 	"scripts": {
 		"css-optimize": "postcss css/*.css -d css/",
 		"scss-optimize": "postcss scss/*.scss -d scss/",
-		"build": "sass --update scss:css"
+		"update": "sass --update scss:css",
+		"build": "postcss css/*.css --use cssnano --no-map -d build/",
+		"uglify": "uglifyjs-folder js -eo build"
 	}
 }

@@ -2,7 +2,6 @@ body {
   margin: 0;
   margin-bottom: 3rem;
   color: #244376;
-  font-family: Google Sans, Noto, Roboto, Helvetica Neue, sans-serif;
 }
 
 model-viewer {
@@ -12,15 +11,15 @@ model-viewer {
   background-color: #000000;
 }
 
-.card1 > model-viewer {
+.card1>model-viewer {
   background-color: #244376;
 }
 
-.card2 > model-viewer {
+.card2>model-viewer {
   background-color: hsl(190, 97%, 50%);
 }
 
-.card3 > model-viewer {
+.card3>model-viewer {
   background-color: hsl(214, 62%, 50%);
 }
 
@@ -40,9 +39,11 @@ model-viewer {
   flex-direction: row;
   justify-content: space-between;
 }
+
 .attribution h1 {
   margin: 0 0 0.25em;
 }
+
 .attribution img {
   height: 2em;
   opacity: 0.5;
