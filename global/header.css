@@ -1,0 +1,30 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+nav ul {
+    display: flex;
+    padding-left: 1em;
+    list-style: none;
+}
+
+nav a {
+    margin: 0em 0.5em;
+    color: #222;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (orientation: portrait) {
+    header {
+        background-color: #F5F5F5;
+    }
+}

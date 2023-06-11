@@ -50,7 +50,7 @@ body {
     justify-content: center;
     animation: fade 0.75s ease-out 0.75s forwards;
     -webkit-user-select: none;
-            user-select: none;
+    user-select: none;
 
     p {
         color: white;
@@ -370,7 +370,7 @@ body {
             margin-right: 4px;
             transform: translate(0, 1px);
             -webkit-user-select: none;
-                    user-select: none;
+            user-select: none;
         }
     }
 

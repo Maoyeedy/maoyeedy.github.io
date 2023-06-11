@@ -16,19 +16,17 @@ html {
   width: 100%;
   height: 100.1vh;
   background-color: black;
+  place-items: center;
   background-image: url(/index-lighting/img/ideas/14.avif);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  place-items: center;
   scroll-snap-align: center;
 }
-
-.homepage>.text {
+.homepage > .text {
   z-index: 1;
 }
-
-.homepage>.overlay {
+.homepage > .overlay {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -47,16 +45,14 @@ html {
   justify-content: center;
   scroll-snap-align: end;
 }
-
-.page>img {
+.page > img {
   position: absolute;
   width: 100%;
   height: 100%;
   filter: brightness(0);
   transition: all 0.75s;
 }
-
-.page>p {
+.page > p {
   position: absolute;
   bottom: 1.5rem;
   left: 1.5rem;
@@ -69,11 +65,9 @@ html {
   transform: translateX(-75%);
   transition: all 0.75s 0.25s;
 }
-
 .page.show img {
   filter: brightness(1);
 }
-
 .page.show p {
   opacity: 1;
   transform: translateX(0);
@@ -84,10 +78,11 @@ html {
   margin: auto;
   padding: 2rem;
   gap: 2rem;
-  max-width: 900px;
   place-items: start;
+  max-width: 900px;
 }
-
-.container>img-comparison-slider {
+.container > img-comparison-slider {
   scroll-snap-align: center;
 }
+
+/*# sourceMappingURL=index-lighting.css.map */
