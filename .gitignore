@@ -2,6 +2,15 @@
 .vscode
 .vs
 
+#VPS
+lighting
+lightingComparison
+minigame
+mirror
+qiyu
+50x.html
+favicon.ico
+
 # Logs
 logs
 *.log
