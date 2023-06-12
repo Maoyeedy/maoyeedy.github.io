@@ -1,28 +1,26 @@
-.idea
-.vscode
-.vs
+#VPS
+lighting/
+lightingComparison/
+minigame/
+mirror/
+qiyu/
+50x.html
+favicon.ico
+
+#Sus
+.idea/
+.vscode/
+.vs/
 
 .sass-cache/
 *.css.map
 *.sass.map
 *.scss.map
 
-#VPS
-lighting
-lightingComparison
-minigame
-mirror
-qiyu
-50x.html
-favicon.ico
-
 # Logs
 logs
 *.log
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-lerna-debug.log*
 .pnpm-debug.log*
 
 # Dependency directories
