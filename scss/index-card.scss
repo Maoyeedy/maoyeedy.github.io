@@ -1,8 +1,12 @@
+/* stylelint-disable color-function-notation */
+/* stylelint-disable property-no-vendor-prefix */
+/* stylelint-disable alpha-value-notation */
+/* stylelint-disable hue-degree-notation */
 body {
     margin: 2em;
     color: white;
-    font-family: 'Barlow', sans-serif;
-    background-image: url(/img/placeholderBG/5.avif);
+    font-family: Barlow, sans-serif;
+    background-image: url('/img/placeholderBG/5.avif');
 }
 
 .container-thin {
@@ -10,16 +14,16 @@ body {
     margin: auto;
     padding: 2rem;
     background: hsl(0 80% 50% / 0.25);
-    background: #00000033;
-    background: #ffffff33;
+    background: #0003;
+    background: #fff3;
     max-width: 550px;
     align-items: center;
     gap: 1rem;
     border-radius: 2rem;
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
-    box-shadow: 0 0.25rem 1.5rem rgba(0, 0, 0, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0.25rem 1.5rem rgb(0 0 0 / 0.12);
+    border: 1px solid rgb(255 255 255 / 0.3);
 
     >img {
         border-radius: 1rem;
