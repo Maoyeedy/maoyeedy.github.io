@@ -22,7 +22,7 @@ img {
 }
 
 body {
-  height: calc(100vh - 2.5vh);
+  height: 97.5vh;
   margin: 2.5vh;
   margin-bottom: 0;
   background-color: #202124;
@@ -65,10 +65,9 @@ body {
 #container {
   display: flex;
   width: 100%;
-  height: calc(100vh - 2.5vh - 8vh);
+  height: 89.5vh;
 }
-
-#main {
+#container #main {
   display: grid;
   width: 100%;
   gap: 2.5vh;
@@ -85,8 +84,7 @@ body {
   transition-duration: 0.4s;
   z-index: 102;
 }
-
-.fill {
+.panel > .fill {
   width: 100%;
   border-radius: 1.5vh;
   overflow: hidden auto;
@@ -123,24 +121,11 @@ body {
 .line > a {
   position: relative;
   width: 100%;
-  height: calc((100vh - 2.5vh - 8vh - 2.5vh) / 2);
+  height: 43.5vh;
   border-radius: 1.5vh;
   overflow: hidden;
   transition: width 0.4s;
 }
-
-#line1 > a:hover {
-  width: 185%;
-}
-
-#line2 > a:hover {
-  width: 125%;
-}
-
-#line3 > a:hover {
-  width: 100%;
-}
-
 .line > a > img {
   width: 100%;
   height: 100%;
@@ -181,6 +166,15 @@ body {
 .line > a:hover > .text-layer {
   opacity: 1;
 }
+.line#line1 > a:hover {
+  width: 185%;
+}
+.line#line2 > a:hover {
+  width: 125%;
+}
+.line#line3 > a:hover {
+  width: 100%;
+}
 
 #footer {
   display: flex;
@@ -191,7 +185,7 @@ body {
 
 #name {
   color: #93969f;
-  font-size: calc(0.45 * 8vh);
+  font-size: 3.6vh;
   font-weight: bold;
   cursor: pointer;
   line-height: 2.4;
@@ -202,33 +196,31 @@ body {
   color: white;
 }
 
-#red-button-placeholder {
-  display: flex;
-  width: calc(0.5 * 8vh);
-  height: 8vh;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
 #red-button {
   display: flex;
-  width: calc(0.5 * 8vh);
-  height: calc(0.5 * 8vh);
+  width: 4vh;
+  height: 4vh;
   background-color: red;
   border-radius: 50%;
   justify-content: center;
   align-items: center;
   transition: background-color 0.6s;
 }
-
-#red-button-placeholder:hover > #red-button {
-  background-color: black;
-}
-
 #red-button > img {
   width: 70%;
   transform: translate(-0.5px, -0.5px);
+}
+
+#red-button-placeholder {
+  display: flex;
+  width: 4vh;
+  height: 8vh;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#red-button-placeholder:hover > #red-button {
+  background-color: black;
 }
 
 #circle-group {
@@ -236,21 +228,19 @@ body {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0%);
-  gap: calc(0.1875 * 8vh);
+  gap: 1.5vh;
 }
 #circle-group .circle {
-  width: calc(0.375 * 8vh);
-  height: calc(0.375 * 8vh);
+  width: 3vh;
+  height: 3vh;
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.4s;
 }
-
-#circle1 {
+#circle-group #circle1 {
   background-color: white;
 }
-
-#circle2 {
+#circle-group #circle2 {
   background-color: #93969f;
 }
 
@@ -281,7 +271,6 @@ body {
   opacity: 0;
   line-height: 1.75;
 }
-
 #resume h1 {
   margin: 0;
   font-size: 2rem;
@@ -362,7 +351,6 @@ body {
   overflow: hidden auto;
   flex-direction: column;
 }
-
 #littlelink > h2 {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
@@ -392,34 +380,33 @@ body {
 #littlelink > .button:hover, #littlelink > .button:focus {
   filter: brightness(90%);
 }
+#littlelink > .button.button-game {
+  background-color: #6637e8;
+}
+#littlelink > .button.button-blog, #littlelink > .button.button-instagram {
+  background-image: linear-gradient(-135deg, #f58529, #dd2a7b, #515bd4);
+}
+#littlelink > .button.button-github {
+  background-color: #171515;
+}
+#littlelink > .button.button-pinterest {
+  background-color: #ffebed;
+  color: black !important;
+}
+#littlelink > .button.button-behance {
+  background-color: #1769ff;
+}
+#littlelink > .button.button-line {
+  background-color: #06c755;
+}
+#littlelink > .button.button-mail {
+  background-color: #1e2329;
+  background-color: #e53626;
+}
 #littlelink .icon {
   width: 20px;
   height: 20px;
   padding: 0px 6px 3px 0px;
   box-sizing: content-box;
   vertical-align: middle;
-}
-
-.button.button-game {
-  background-color: #6637e8;
-}
-.button.button-blog, .button.button-instagram {
-  background-image: linear-gradient(-135deg, #f58529, #dd2a7b, #515bd4);
-}
-.button.button-github {
-  background-color: #171515;
-}
-.button.button-pinterest {
-  background-color: #ffebed;
-  color: black !important;
-}
-.button.button-behance {
-  background-color: #1769ff;
-}
-.button.button-line {
-  background-color: #06c755;
-}
-.button.button-mail {
-  background-color: #1e2329;
-  background-color: #e53626;
 }/*# sourceMappingURL=index.css.map */
