@@ -13,7 +13,6 @@
 		"optimize-css": "postcss css/*.css -d css/",
 		"optimize-scss": "postcss scss/*.scss -d scss/",
 		"postcss": "postcss css/*.css --use cssnano --no-map -d build/",
-
 		"build": "sass --update scss:css",
 		"watch": "sass --watch scss:css",
 		"uglify": "uglifyjs-folder js -x .js -eo build --config-file \"./uglify.json\""
