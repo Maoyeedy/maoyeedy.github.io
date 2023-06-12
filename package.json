@@ -17,6 +17,7 @@
 		"postcss": "postcss css/*.css --use cssnano --no-map -d build/",
 		"build": "sass --update scss:css",
 		"watch": "sass --watch scss:css",
-		"uglify": "uglifyjs-folder js -x .js -eo build --config-file \"./uglify.json\""
+		"uglify": "uglifyjs-folder js -x .js -eo build --config-file \"./uglify.json\"",
+		"uglifylib": "uglifyjs-folder lib -x .js -eo lib --config-file \"./uglify.json\""
 	}
 }
