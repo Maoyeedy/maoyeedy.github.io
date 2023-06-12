@@ -3,7 +3,7 @@ body {
   margin: 0;
   background-color: aliceblue;
   color: white;
-  font-family: "overpass", sans-serif;
+  font-family: Overpass, sans-serif;
   gap: 2em;
   place-items: center;
 }
@@ -26,15 +26,18 @@ pre {
   overflow-y: scroll;
   border-radius: 0 0 1em 1em;
 }
+
 .right h1 {
   margin: 0;
   margin-bottom: 0.5em;
 }
+
 .right p {
   margin: 0;
   margin-bottom: 1em;
   line-height: 150%;
 }
+
 .right a {
   color: inherit;
   font-weight: bold;
@@ -51,12 +54,14 @@ pre {
   grid-template-columns: auto 1fr;
 }
 
-.img-code > img,
-.img-code > iframe {
+.img-code>img,
+.img-code>iframe {
   width: 24em;
   height: 100%;
   background-color: #1F1F1F;
   border-radius: 1em;
   object-fit: cover;
   object-fit: contain;
-}/*# sourceMappingURL=index-qiyu.css.map */
+}
+
+/*# sourceMappingURL=index-qiyu.css.map */

@@ -27,7 +27,7 @@ body {
   margin-bottom: 0;
   background-color: #202124;
   color: black;
-  font-family: "Barlow", sans-serif;
+  font-family: Barlow, sans-serif;
 }
 
 #warning {
@@ -45,6 +45,7 @@ body {
   -webkit-user-select: none;
   user-select: none;
 }
+
 #warning p {
   color: white;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -57,16 +58,19 @@ body {
     opacity: 1;
     visibility: visible;
   }
+
   to {
     opacity: 0;
     visibility: hidden;
   }
 }
+
 #container {
   display: flex;
   width: 100%;
   height: 89.5vh;
 }
+
 #container #main {
   display: grid;
   width: 100%;
@@ -84,7 +88,8 @@ body {
   transition-duration: 0.4s;
   z-index: 102;
 }
-.panel > .fill {
+
+.panel>.fill {
   width: 100%;
   border-radius: 1.5vh;
   overflow: hidden auto;
@@ -93,9 +98,11 @@ body {
 .show-left-panel #left {
   width: 20vw;
 }
+
 .show-left-panel #main {
   margin-left: 2.5vh;
 }
+
 .show-left-panel #littlelink {
   opacity: 1;
 }
@@ -104,9 +111,11 @@ body {
   width: 35vw;
   transition-duration: 0.6s;
 }
+
 .show-right-panel #main {
   margin-right: 2.5vh;
 }
+
 .show-right-panel #resume {
   opacity: 1;
   transition-duration: 0.7s;
@@ -118,7 +127,8 @@ body {
   gap: 2.5vh;
   scroll-snap-align: end;
 }
-.line > a {
+
+.line>a {
   position: relative;
   width: 100%;
   height: 43.5vh;
@@ -126,7 +136,8 @@ body {
   overflow: hidden;
   transition: width 0.4s;
 }
-.line > a > img {
+
+.line>a>img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -134,7 +145,8 @@ body {
   transition: transform 0.4s;
   transform: scale(1.1);
 }
-.line > a > .layer {
+
+.line>a>.layer {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -143,7 +155,8 @@ body {
   transition: opacity 0.8s;
   opacity: 0;
 }
-.line > a > .text-layer {
+
+.line>a>.text-layer {
   display: flex;
   position: absolute;
   width: 100%;
@@ -157,22 +170,28 @@ body {
   transition: opacity 0.8s;
   opacity: 0;
 }
-.line > a:hover > img {
+
+.line>a:hover>img {
   transform: scale(1);
 }
-.line > a:hover > .layer {
+
+.line>a:hover>.layer {
   opacity: 0.4;
 }
-.line > a:hover > .text-layer {
+
+.line>a:hover>.text-layer {
   opacity: 1;
 }
-.line#line1 > a:hover {
+
+.line#line1>a:hover {
   width: 185%;
 }
-.line#line2 > a:hover {
+
+.line#line2>a:hover {
   width: 125%;
 }
-.line#line3 > a:hover {
+
+.line#line3>a:hover {
   width: 100%;
 }
 
@@ -192,6 +211,7 @@ body {
   transform: translateY(-2px);
   transition: color 0.4s;
 }
+
 #name:hover {
   color: white;
 }
@@ -206,7 +226,8 @@ body {
   align-items: center;
   transition: background-color 0.6s;
 }
-#red-button > img {
+
+#red-button>img {
   width: 70%;
   transform: translate(-0.5px, -0.5px);
 }
@@ -219,7 +240,8 @@ body {
   align-items: center;
   cursor: pointer;
 }
-#red-button-placeholder:hover > #red-button {
+
+#red-button-placeholder:hover>#red-button {
   background-color: black;
 }
 
@@ -230,6 +252,7 @@ body {
   transform: translate(-50%, 0%);
   gap: 1.5vh;
 }
+
 #circle-group .circle {
   width: 3vh;
   height: 3vh;
@@ -237,9 +260,11 @@ body {
   cursor: pointer;
   transition: background-color 0.4s;
 }
+
 #circle-group #circle1 {
   background-color: white;
 }
+
 #circle-group #circle2 {
   background-color: #93969f;
 }
@@ -271,23 +296,28 @@ body {
   opacity: 0;
   line-height: 1.75;
 }
+
 #resume h1 {
   margin: 0;
   font-size: 2rem;
 }
+
 #resume h2 {
   margin: 0;
   line-height: 1;
 }
+
 #resume p {
   margin: 0;
 }
+
 #resume #contact,
 #resume h1,
 #resume h2 {
   text-align: center;
   justify-content: center;
 }
+
 #resume hr {
   height: 1px;
   height: 0;
@@ -296,24 +326,29 @@ body {
   background-color: #b9c0c6;
   border: none;
 }
+
 #resume hr:first-of-type {
   height: 1px;
   margin-top: 1rem;
 }
+
 #resume ul {
   margin: 0;
   margin-left: 1rem;
   padding: 0;
   white-space: normal;
 }
+
 #resume #contact {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
 }
+
 #resume #contact p {
   line-height: 1;
 }
+
 #resume #contact img {
   width: 12px;
   height: 12px;
@@ -322,6 +357,7 @@ body {
   -webkit-user-select: none;
   user-select: none;
 }
+
 #resume .wrapper {
   margin-top: 0.75rem;
   padding: 0.75rem;
@@ -329,12 +365,15 @@ body {
   background-color: aliceblue;
   border-radius: 1rem;
 }
+
 #resume .wrapper ul {
   margin-top: 0.25rem;
 }
+
 #resume #skills {
   margin-top: 0;
 }
+
 #resume .justified {
   display: flex;
   justify-content: space-between;
@@ -351,11 +390,13 @@ body {
   overflow: hidden auto;
   flex-direction: column;
 }
-#littlelink > h2 {
+
+#littlelink>h2 {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
 }
-#littlelink > .avatar {
+
+#littlelink>.avatar {
   width: 8vw;
   height: 8vw;
   margin-bottom: 0.75rem;
@@ -363,7 +404,8 @@ body {
   background-position: center;
   border-radius: 50%;
 }
-#littlelink > .button {
+
+#littlelink>.button {
   display: inline-block;
   width: 100%;
   height: 3rem;
@@ -374,39 +416,53 @@ body {
   text-decoration: none;
   text-align: center;
 }
-#littlelink > .button:last-child {
+
+#littlelink>.button:last-child {
   margin: 0;
 }
-#littlelink > .button:hover, #littlelink > .button:focus {
+
+#littlelink>.button:hover,
+#littlelink>.button:focus {
   filter: brightness(90%);
 }
-#littlelink > .button.button-game {
+
+#littlelink>.button.button-game {
   background-color: #6637e8;
 }
-#littlelink > .button.button-blog, #littlelink > .button.button-instagram {
+
+#littlelink>.button.button-blog,
+#littlelink>.button.button-instagram {
   background-image: linear-gradient(-135deg, #f58529, #dd2a7b, #515bd4);
 }
-#littlelink > .button.button-github {
+
+#littlelink>.button.button-github {
   background-color: #171515;
 }
-#littlelink > .button.button-pinterest {
+
+#littlelink>.button.button-pinterest {
   background-color: #ffebed;
   color: black !important;
 }
-#littlelink > .button.button-behance {
+
+#littlelink>.button.button-behance {
   background-color: #1769ff;
 }
-#littlelink > .button.button-line {
+
+#littlelink>.button.button-line {
   background-color: #06c755;
 }
-#littlelink > .button.button-mail {
+
+#littlelink>.button.button-mail {
   background-color: #1e2329;
   background-color: #e53626;
 }
+
 #littlelink .icon {
   width: 20px;
   height: 20px;
   padding: 0px 6px 3px 0px;
   box-sizing: content-box;
   vertical-align: middle;
-}/*# sourceMappingURL=index.css.map */
+}
+
+/*# sourceMappingURL=index.css.map */
