@@ -2,7 +2,7 @@ body {
   margin: 0;
   background-color: #111;
   color: white;
-  font-family: "overpass", sans-serif;
+  font-family: Overpass, sans-serif;
   font: 110%/1.5;
 }
 
@@ -17,7 +17,7 @@ html {
   height: 100.1vh;
   background-color: black;
   place-items: center;
-  background-image: url(/index-lighting/img/ideas/14.avif);
+  background-image: url("/index-lighting/img/ideas/14.avif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
