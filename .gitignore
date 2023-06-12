@@ -12,10 +12,10 @@ favicon.ico
 .vscode/
 .vs/
 
-.sass-cache/
-*.css.map
-*.sass.map
-*.scss.map
+# .sass-cache/
+# *.css.map
+# *.sass.map
+# *.scss.map
 
 # Logs
 logs
