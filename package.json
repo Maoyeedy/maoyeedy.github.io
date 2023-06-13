@@ -19,6 +19,7 @@
 		"watch": "sass --watch scss:css",
 
 		"uglifyjs": "uglifyjs-folder js -x .js -eo build --config-file \"./uglify.json\"",
-		"uglifylib": "uglifyjs-folder lib -x .js -eo lib --config-file \"./uglify.json\""
+		"uglifylib": "uglifyjs-folder lib -x .js -eo lib --config-file \"./uglify.json\"",
+		"stylelint": "stylelint \"scss/*.scss\""
 	}
 }
