@@ -29,9 +29,6 @@ devDependencies:
   stylelint-config-standard-scss:
     specifier: ^9.0.0
     version: 9.0.0(postcss@8.4.24)(stylelint@15.7.0)
-  uglify-js:
-    specifier: ^3.17.4
-    version: 3.17.4
   uglifyjs-folder:
     specifier: ^3.2.0
     version: 3.2.0
@@ -2013,12 +2010,6 @@ packages:
   /type-fest@0.8.1:
     resolution: {integrity: sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==}
     engines: {node: '>=8'}
-    dev: true
-
-  /uglify-js@3.17.4:
-    resolution: {integrity: sha512-T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==}
-    engines: {node: '>=0.8.0'}
-    hasBin: true
     dev: true
 
   /uglifyjs-folder@3.2.0:

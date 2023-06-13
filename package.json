@@ -8,16 +8,17 @@
 		"postcss-sorting": "^8.0.2",
 		"stylelint": "^15.7.0",
 		"stylelint-config-standard-scss": "^9.0.0",
-		"uglify-js": "^3.17.4",
 		"uglifyjs-folder": "^3.2.0"
 	},
 	"scripts": {
 		"optimize-css": "postcss css/*.css -d css/",
 		"optimize-scss": "postcss scss/*.scss -d scss/",
-		"postcss": "postcss css/*.css --use cssnano --no-map -d build/",
+		"cssnano": "postcss css/*.css --use cssnano --no-map -d css/",
+
 		"build": "sass --update scss:css",
 		"watch": "sass --watch scss:css",
-		"uglify": "uglifyjs-folder js -x .js -eo build --config-file \"./uglify.json\"",
+
+		"uglifyjs": "uglifyjs-folder js -x .js -eo build --config-file \"./uglify.json\"",
 		"uglifylib": "uglifyjs-folder lib -x .js -eo lib --config-file \"./uglify.json\""
 	}
 }
