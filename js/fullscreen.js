@@ -11,8 +11,8 @@ imgElements.forEach(img => {
     overlay.style.top = '0'
     overlay.style.left = '0'
     overlay.style.cursor = 'zoom-out'
-    // overlay.style.background = `RGBA(255,255,255,1) url(${src}) no-repeat center`
-    // overlay.style.background = `RGBA(255,255,255,1) url(${src}) no-repeat center / contain`
+    // overlay.style.background = `RGBA(255,255,255,0.5) url(${src}) no-repeat center`
+    // overlay.style.background = `RGBA(255,255,255,0.5) url(${src}) no-repeat center / contain`
     overlay.style.background = `#fff url(${src}) no-repeat center / auto 70%`
 
     overlay.addEventListener('click', () => {
