@@ -3,7 +3,8 @@ body {
   background-color: #111;
   color: white;
   font-family: Overpass, sans-serif;
-  font: 110%/1.5;
+  font-size: 1.1em;
+  line-height: 1.5;
 }
 
 html {
@@ -83,4 +84,6 @@ html {
 }
 .container > img-comparison-slider {
   scroll-snap-align: center;
-}/*# sourceMappingURL=index-lighting.css.map */
+}
+
+/*# sourceMappingURL=index-lighting.css.map */

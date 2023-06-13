@@ -1,6 +1,6 @@
 const imgElements = document.querySelectorAll('.fullscreenable img')
 
-imgElements.forEach((img) => {
+imgElements.forEach(img => {
   img.addEventListener('click', () => {
     const src = img.getAttribute('src')
     const overlay = document.createElement('div')
@@ -13,12 +13,13 @@ imgElements.forEach((img) => {
     overlay.style.cursor = 'zoom-out'
     // overlay.style.background = `RGBA(255,255,255,1) url(${src}) no-repeat center`
     // overlay.style.background = `RGBA(255,255,255,1) url(${src}) no-repeat center / contain`
-    overlay.style.background = `RGBA(255,255,255,1) url(${src}) no-repeat center / auto 70%`
+    overlay.style.background = `#fff url(${src}) no-repeat center / auto 70%`
 
     overlay.addEventListener('click', () => {
       overlay.remove()
       document.body.style.overflow = 'visible'
     })
+    document.body.appendChild(overlay)
     document.body.appendChild(overlay)
     document.body.style.overflow = 'clip'
   })

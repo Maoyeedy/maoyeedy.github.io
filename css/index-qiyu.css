@@ -26,18 +26,15 @@ pre {
   overflow-y: scroll;
   border-radius: 0 0 1em 1em;
 }
-
 .right h1 {
   margin: 0;
   margin-bottom: 0.5em;
 }
-
 .right p {
   margin: 0;
   margin-bottom: 1em;
   line-height: 150%;
 }
-
 .right a {
   color: inherit;
   font-weight: bold;
@@ -54,8 +51,8 @@ pre {
   grid-template-columns: auto 1fr;
 }
 
-.img-code>img,
-.img-code>iframe {
+.img-code > img,
+.img-code > iframe {
   width: 24em;
   height: 100%;
   background-color: #1F1F1F;
