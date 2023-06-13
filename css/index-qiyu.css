@@ -1,6 +1,7 @@
 body {
   display: grid;
   margin: 0;
+  margin: 2rem;
   background-color: aliceblue;
   color: white;
   font-family: Overpass, sans-serif;
@@ -59,6 +60,4 @@ pre {
   border-radius: 1em;
   object-fit: cover;
   object-fit: contain;
-}
-
-/*# sourceMappingURL=index-qiyu.css.map */
+}/*# sourceMappingURL=index-qiyu.css.map */

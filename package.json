@@ -7,6 +7,7 @@
 		"postcss-scss": "^4.0.6",
 		"postcss-sorting": "^8.0.2",
 		"sass": "^1.63.3",
+		"stylelint": "^15.7.0",
 		"stylelint-config-standard-scss": "^9.0.0",
 		"uglifyjs-folder": "^3.2.0"
 	},
@@ -17,6 +18,7 @@
 		"build": "sass --update scss:css",
 		"watch": "sass --watch scss:css",
 		"uglifyjs": "uglifyjs-folder js -x .js -eo build --config-file ./uglify.json",
-		"uglifylib": "uglifyjs-folder lib -x .js -eo lib --config-file ./uglify.json"
+		"uglifylib": "uglifyjs-folder lib -x .js -eo lib --config-file ./uglify.json",
+		"stylelint": "stylelint scss/"
 	}
 }
