@@ -11,8 +11,8 @@ const circle2 = document.getElementById("circle2");
 const scrollPercentage = (window.innerHeight / 100) * 46;
 
 function setColor(isDark) {
-    circle1.style.backgroundColor = isDark ? "#93969f" : "white";
-    circle2.style.backgroundColor = isDark ? "white" : "#93969f";
+    circle1.style.backgroundColor = isDark ? "#93969f" : "#ffffff";
+    circle2.style.backgroundColor = isDark ? "#ffffff" : "#93969f";
 }
 
 function scrollMain(isDown) {

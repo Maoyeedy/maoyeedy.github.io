@@ -2,6 +2,7 @@
 	"devDependencies": {
 		"autoprefixer": "^10.4.14",
 		"cssnano": "^6.0.1",
+		"eslint": "^8.42.0",
 		"postcss": "^8.4.24",
 		"postcss-cli": "^10.1.0",
 		"postcss-scss": "^4.0.6",
@@ -14,10 +15,8 @@
 		"optimize-css": "postcss css/*.css -d css/",
 		"optimize-scss": "postcss scss/*.scss -d scss/",
 		"cssnano": "postcss css/*.css --use cssnano --no-map -d css/",
-
 		"build": "sass --update scss:css",
 		"watch": "sass --watch scss:css",
-
 		"uglifyjs": "uglifyjs-folder js -x .js -eo build --config-file \"./uglify.json\"",
 		"uglifylib": "uglifyjs-folder lib -x .js -eo lib --config-file \"./uglify.json\"",
 		"stylelint": "stylelint \"scss/*.scss\""
