@@ -12,43 +12,47 @@ const circle2 = document.getElementById('circle2')
 const scrollPercentage = (window.innerHeight / 100) * 46
 
 function setColor (isDark) {
-    circle1.style.backgroundColor = isDark ? '#93969f' : '#ffffff'
-    circle2.style.backgroundColor = isDark ? '#ffffff' : '#93969f'
+  circle1.style.backgroundColor = isDark ? '#93969f' : '#ffffff'
+  circle2.style.backgroundColor = isDark ? '#ffffff' : '#93969f'
 }
 
 function scrollMain (isDown) {
-    main.scrollTop += isDown ? scrollPercentage : -1 * scrollPercentage
-    setColor(isDown)
+  main.scrollTop += isDown ? scrollPercentage : -1 * scrollPercentage
+  setColor(isDown)
 }
 
 function toggleLeftPanel () {
-    container.classList.toggle('show-left-panel')
+  container.classList.toggle('show-left-panel')
 }
 
 function toggleRightPanel () {
-    container.classList.toggle('show-right-panel')
+  container.classList.toggle('show-right-panel')
 }
 
 function loadDeferContent () {
-    const images = document.querySelectorAll('.defer img')
-    images.forEach((img) => {
-        img.src = img.dataset.src
-    })
+  const images = document.querySelectorAll('.defer img')
+  images.forEach(img => {
+    img.src = img.dataset.src
+  })
 }
 
 circle1.addEventListener('click', () => scrollMain(false))
 circle2.addEventListener('click', () => scrollMain(true))
 
-main.addEventListener('wheel', (event) => {
+main.addEventListener(
+  'wheel',
+  event => {
     setColor(event.deltaY > 0)
-}, { passive: true })
+  },
+  { passive: true }
+)
 
-document.addEventListener('keydown', (event) => {
-    if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
-        scrollMain(true)
-    } else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
-        scrollMain(false)
-    }
+document.addEventListener('keydown', event => {
+  if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
+    scrollMain(true)
+  } else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
+    scrollMain(false)
+  }
 })
 
 maoyeedy.addEventListener('mouseover', toggleLeftPanel)
@@ -65,3 +69,21 @@ rightTrigger.addEventListener('mouseover', toggleRightPanel)
 rightTrigger.addEventListener('mouseout', toggleRightPanel)
 
 setTimeout(loadDeferContent, 1500)
+
+//Function
+const clickableElement = document.getElementById('more')
+const textLayerElement = clickableElement.querySelector('.text-layer')
+const initialText = textLayerElement.textContent
+
+textLayerElement.textContent = 'More'
+clickableElement.href = '#line3'
+
+clickableElement.addEventListener('click', function () {
+  if (textLayerElement.textContent != 'More') {
+    textLayerElement.textContent = 'More'
+    clickableElement.href = '#line1'
+  } else {
+    textLayerElement.textContent = 'Back To Top'
+    clickableElement.href = '#line3'
+  }
+})
