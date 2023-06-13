@@ -11,6 +11,7 @@
 		"postcss-cli": "^10.1.0",
 		"postcss-scss": "^4.0.6",
 		"postcss-sorting": "^8.0.2",
+		"standard": "^17.1.0",
 		"stylelint": "^15.7.0",
 		"stylelint-config-standard-scss": "^9.0.0",
 		"uglifyjs-folder": "^3.2.0"
