@@ -45,7 +45,7 @@ video {
     }
 
     &:not(.fullscreen):hover {
-        transform: scale(1.5);
+        transform: scale(1.0175);
         filter: drop-shadow(0 0.2rem 0.8rem rgba(0, 0, 0, 0.20));
     }
 
