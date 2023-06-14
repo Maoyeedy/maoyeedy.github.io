@@ -12,6 +12,6 @@ const observer = new IntersectionObserver((entries) => {
   })
 })
 
-const pages = document.querySelectorAll('.page')
 // const endOfScroll = document.getElementById('endofscroll')
+const pages = document.querySelectorAll('.page')
 pages.forEach((el) => observer.observe(el))
