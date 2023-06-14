@@ -1,0 +1,26 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+nav {
+    ul {
+        display: flex;
+        padding-left: 1em;
+        list-style: none;
+    }
+
+    a {
+        margin: 0 .5em;
+        color: #222;
+        font-weight: 700;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

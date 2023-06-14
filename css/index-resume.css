@@ -1,1 +1,86 @@
-body{font-family:Barlow,sans-serif;margin:2rem}#resume{background-color:#fff;border-radius:2em;color:#0a0d0f;filter:drop-shadow(0 6px 12px rgba(0,0,0,.1));line-height:1.75;margin:auto;padding:.4rem 1.2rem 1.2rem;width:35vw}#resume h1{font-size:2rem;margin:0}#resume h2{line-height:1;margin:0}#resume p{margin:0}#resume hr{background-color:#b9c0c6;border:none;height:1px;height:0;margin:0 0 1rem}#resume hr:first-of-type{height:1px;margin-top:1rem}#resume ul{margin:0 0 0 1rem;padding:0;white-space:normal}#resume #contact{display:flex;flex-wrap:wrap;gap:12px}#resume #contact p{line-height:1}#resume #contact img{height:12px;margin-right:4px;transform:translateY(1px);-webkit-user-select:none;user-select:none;width:12px}#resume .wrapper{background-color:#f0f8ff;border-radius:1rem;margin-top:.75rem;padding:.5rem .75rem .75rem}#resume .wrapper>ul{margin-top:.25rem}#resume .wrapper>#skills{margin-top:0}#resume .justified{display:flex;flex-wrap:wrap;justify-content:space-between}#resume #contact,#resume h1,#resume h2{justify-content:center;text-align:center}
+body {
+  margin: 2rem;
+  font-family: Barlow, sans-serif;
+}
+
+#resume {
+  width: 35vw;
+  margin: auto;
+  padding: 1.2rem;
+  padding-top: 0.4rem;
+  background-color: white;
+  color: #0a0d0f;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.1));
+  border-radius: 2em;
+  line-height: 1.75;
+}
+#resume h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+#resume h2 {
+  margin: 0;
+  line-height: 1;
+}
+#resume p {
+  margin: 0;
+}
+#resume hr {
+  height: 1px;
+  height: 0;
+  margin: 1rem 0;
+  margin-top: 0;
+  background-color: #b9c0c6;
+  border: none;
+}
+#resume hr:first-of-type {
+  height: 1px;
+  margin-top: 1rem;
+}
+#resume ul {
+  margin: 0;
+  margin-left: 1rem;
+  padding: 0;
+  white-space: normal;
+}
+#resume #contact {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+#resume #contact p {
+  line-height: 1;
+}
+#resume #contact img {
+  width: 12px;
+  height: 12px;
+  margin-right: 4px;
+  transform: translate(0, 1px);
+  -webkit-user-select: none;
+  user-select: none;
+}
+#resume .wrapper {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  padding-top: 0.5rem;
+  background-color: aliceblue;
+  border-radius: 1rem;
+}
+#resume .wrapper > ul {
+  margin-top: 0.25rem;
+}
+#resume .wrapper > #skills {
+  margin-top: 0;
+}
+#resume .justified {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#resume #contact,
+#resume h1,
+#resume h2 {
+  text-align: center;
+  justify-content: center;
+}/*# sourceMappingURL=index-resume.css.map */
