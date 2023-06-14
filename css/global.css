@@ -52,6 +52,7 @@ img {
   object-fit: cover;
   -webkit-user-select: none;
   user-select: none;
+  background-color: #ccc;
 }
 
 audio,
