@@ -11,6 +11,8 @@
   <script defer src="/js/global.js"></script>
 
   <link rel="stylesheet" href="/css/index-modelviewer.css">
+  <script defer src="script.js"></script>
+
   <script async src="/lib/es-module-shims.js"></script>
   <script type="importmap">
         {
@@ -21,6 +23,10 @@
     </script>
   <script type="module" src="/lib/model-viewer-no-three.min.js"></script>
   <script type="module" src="/lib/model-viewer-effects.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -35,19 +41,58 @@
       </effect-composer>
     </model-viewer>
     <section class="attribution">
-      <span>
-        <h1>Nerdo</h1>
-        <span>By Maoyeedy</span>
-      </span>
+      <h1>Nerdo</h1>
+      <div>
+        <span>Polymodelled with <i>Maya</i></span>
+        <span>Concept from 🤓</span>
+      </div>
     </section>
   </div>
 
   <div class="card card2">
+    <model-viewer src="Fish.glb" id="orbit1" interpolation-decay="150" shadow-intensity="0" camera-orbit="0deg 100deg 12m">
+      <effect-composer>
+        <color-grade-effect opacity="1" brightness="0.05" contrast="0.1"></color-grade-effect>
+        <outline-effect color="white" opacity="1" strength="5" smoothing="0.5"></outline-effect>
+      </effect-composer>
+    </model-viewer>
+    <script>
+      (() => {
+        const modelViewer = document.getElementById("orbit1")
+        const orbitCycle = [
+          "-45deg 80deg 12m",
+          "60deg 120deg 1m",
+          "0deg 100deg 12m"
+        ]
+        setInterval(() => {
+          const currentOrbitIndex = orbitCycle.indexOf(modelViewer.cameraOrbit)
+          modelViewer.cameraOrbit =
+            orbitCycle[(currentOrbitIndex + 1) % orbitCycle.length]
+        }, 3000)
+      })();
+    </script>
+    <section class="attribution">
+      <h1>Samurai Fish</h1>
+      <div>
+        <span>Sculpted with <i>Zbrush</i><br>Rigged and animated with <i>Blender</i></span>
+        <span>Concept by me myself</span>
+      </div>
+    </section>
+  </div>
+
+  <div class="card card3">
     <model-viewer src="my_pretty.glb" shadow-intensity="0" camera-controls camera-orbit="0deg 95deg 40%">
       <effect-composer>
         <bloom-effect opacity="1" strength="0.3" threshold="0.6" radius="0.3" smoothing="0.02"></bloom-effect>
       </effect-composer>
     </model-viewer>
+    <section class="attribution">
+      <h1>Toon Shaded</h1>
+      <div>
+        <span>Faked the <i>looking-at-you</i> effect by caving her eyes</span>
+        <span>Concept from Artstation</span>
+      </div>
+    </section>
   </div>
 
   <div class="card">
@@ -57,9 +102,16 @@
         <bloom-effect opacity="1" strength="0.9" threshold="0.6" radius="0.3" smoothing="0.025"></bloom-effect>
       </effect-composer>
     </model-viewer>
+    <section class="attribution">
+      <h1>Portal</h1>
+      <div>
+        <span>Used in my Unity project as Game-Start portal</span>
+        <span>Concept from Minecraft</span>
+      </div>
+    </section>
   </div>
 
-  <div class="card">
+  <!-- <div class="card">
     <model-viewer id="orbit2" interpolation-decay="200" src="Marble.glb"> </model-viewer>
     <script>
       (() => {
@@ -76,10 +128,12 @@
         }, 3000)
       })();
     </script>
-  </div>
+  </div> -->
 
-  <!-- <footer><span>Made possible <a href="https://github.com/GoogleWebComponents/model-viewer" target="_blank">&lt;model-viewer&gt;</a> web component.</span>
-    <span>It makes displaying 3D and AR content on the web easy ✌️</span></footer> -->
+  <footer>
+    <span>Made possible with <a href="https://github.com/GoogleWebComponents/model-viewer" target="_blank">&lt;model-viewer&gt;</a></span>
+    <span><a href="/index.html">Back to Homepage</a></span>
+  </footer>
 
   <script>
     self.ModelViewerElement = self.ModelViewerElement || {}

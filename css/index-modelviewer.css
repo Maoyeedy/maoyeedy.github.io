@@ -1,55 +1,61 @@
 body {
-  margin: 0;
-  margin-bottom: 3rem;
+  margin: 2rem;
+  font-family: Barlow, sans-serif;
   color: #244376;
-}
-
-model-viewer {
-  --poster-color: #fff0;
-  width: 100%;
-  height: 400px;
-  background-color: #000;
-}
-
-.card1 > model-viewer {
-  background-color: #244376;
-}
-
-.card2 > model-viewer {
-  background-color: hsl(190, 97%, 50%);
-}
-
-.card3 > model-viewer {
-  background-color: hsl(214, 62%, 50%);
 }
 
 .card {
   display: flex;
-  margin: 3em auto;
+  margin: 2rem auto;
   flex-direction: column;
   max-width: 600px;
-  border-radius: 6px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 1rem;
+  box-shadow: 0 0.12rem 0.6rem rgba(0, 0, 0, 0.24);
   overflow: hidden;
+  visibility: hidden;
 }
-
-.attribution {
+.card.show {
+  visibility: visible;
+}
+.card > model-viewer {
+  --poster-color: #fff0;
+  width: 100%;
+  height: 350px;
+  background-color: #000;
+}
+.card .attribution {
+  padding: 1em;
+  color: #000;
+}
+.card .attribution > div {
   display: flex;
-  margin: 1em;
   flex-direction: row;
   justify-content: space-between;
+  align-items: end;
 }
-.attribution h1 {
-  margin: 0 0 0.25em;
+.card .attribution h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
-.attribution img {
-  height: 2em;
-  opacity: 0.5;
+.card .attribution span {
+  line-height: 1.5;
+}
+.card.card1 > model-viewer {
+  background-color: #7b68ee;
+}
+.card.card1 .attribution {
+  color: hsl(249, 90%, 15%);
+}
+.card.card2 > model-viewer {
+  background-color: hsl(200, 89%, 81%);
+}
+.card.card3 > model-viewer {
+  background-color: #04d2fb;
 }
 
 footer {
   display: flex;
-  margin: auto;
+  margin: 2rem auto;
   font-style: italic;
   flex-direction: column;
   max-width: 600px;
