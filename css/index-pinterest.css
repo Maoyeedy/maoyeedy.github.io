@@ -1,3 +1,7 @@
+body {
+  margin: 2rem;
+}
+
 .container-image {
   display: flex;
   margin: auto;
@@ -8,7 +12,7 @@
   align-items: center;
   border-radius: 2rem;
   gap: 1rem;
-  box-shadow: 0 0.25rem 1.5rem rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -36,17 +40,22 @@ video {
   cursor: pointer;
   object-fit: cover;
   border-radius: 1rem;
-  filter: drop-shadow(0 0.2rem 0.8rem rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0 0.15rem 0.6rem rgba(0, 0, 0, 0.1));
   transition-property: transform, filter;
 }
 img:not(.fullscreen),
 video:not(.fullscreen) {
-  transition-duration: 0.5s;
+  transition-duration: 0.2s;
 }
 img:not(.fullscreen):hover,
 video:not(.fullscreen):hover {
-  transform: scale(1.0175);
-  filter: drop-shadow(0 0.2rem 0.8rem rgba(0, 0, 0, 0.2));
+  transition-duration: 0.4s;
+  transform: scale(1.02);
+  filter: drop-shadow(0 0.15rem 0.6rem rgba(0, 0, 0, 0.2));
+}
+img:not(.fullscreen):hover.ultrawide,
+video:not(.fullscreen):hover.ultrawide {
+  transform: scale(1.015);
 }
 img.fullscreen,
 video.fullscreen {
@@ -59,6 +68,7 @@ video.fullscreen {
   z-index: 10000;
   transition-duration: 0s;
   cursor: zoom-out;
+  filter: drop-shadow(0 0.2rem 1rem rgba(0, 0, 0, 0.1));
 }
 
 #fullscreen-overlay {
