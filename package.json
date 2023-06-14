@@ -13,7 +13,8 @@
 		"uglifyjs-folder": "^3.2.0"
 	},
 	"scripts": {
-		"lint": "standard | snazzy && stylelint *.scss",
+		"stylelint": "stylelint *.scss",
+		"standard": "standard | snazzy",
 		"optimize": "postcss *.scss --replace",
 		"cssnano": "postcss css/*.css --use cssnano --no-map --replace",
 		"uglifyjs": "uglifyjs-folder js -x .js -eo build --config-file ./uglify.json",

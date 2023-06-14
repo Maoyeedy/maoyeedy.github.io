@@ -1,4 +1,3 @@
-/* eslint-disable indent */
 const main = document.getElementById('main')
 const container = document.getElementById('container')
 const maoyeedy = document.getElementById('name')
@@ -11,31 +10,7 @@ const circle1 = document.getElementById('circle1')
 const circle2 = document.getElementById('circle2')
 const scrollPercentage = (window.innerHeight / 100) * 46
 
-function setColor (isDark) {
-  circle1.style.backgroundColor = isDark ? '#93969f' : '#ffffff'
-  circle2.style.backgroundColor = isDark ? '#ffffff' : '#93969f'
-}
-
-function scrollMain (isDown) {
-  main.scrollTop += isDown ? scrollPercentage : -1 * scrollPercentage
-  setColor(isDown)
-}
-
-function toggleLeftPanel () {
-  container.classList.toggle('show-left-panel')
-}
-
-function toggleRightPanel () {
-  container.classList.toggle('show-right-panel')
-}
-
-function loadDeferContent () {
-  const images = document.querySelectorAll('.defer img')
-  images.forEach(img => {
-    img.src = img.dataset.src
-  })
-}
-
+// Function
 circle1.addEventListener('click', () => scrollMain(false))
 circle2.addEventListener('click', () => scrollMain(true))
 
@@ -55,6 +30,37 @@ document.addEventListener('keydown', event => {
   }
 })
 
+function scrollMain (isDown) {
+  main.scrollTop += isDown ? scrollPercentage : -1 * scrollPercentage
+  setColor(isDown)
+}
+
+function setColor (isDown) {
+  circle1.style.backgroundColor = isDown ? '#93969f' : '#ffffff'
+  circle2.style.backgroundColor = isDown ? '#ffffff' : '#93969f'
+  isDown ? toggleText2() : toggleText1()
+  hasClicked = !hasClicked
+}
+
+// Function
+let hasClicked = false
+const clickableElement = document.getElementById('more')
+const textLayerElement = clickableElement.querySelector('.text-layer')
+
+clickableElement.addEventListener('click', function () {
+  scrollMain(!hasClicked)
+})
+
+function toggleText1 () {
+  textLayerElement.textContent = 'More'
+}
+function toggleText2 () {
+  textLayerElement.textContent = 'Back To Top'
+}
+
+// Function
+function toggleLeftPanel () { container.classList.toggle('show-left-panel') }
+function toggleRightPanel () { container.classList.toggle('show-right-panel') }
 maoyeedy.addEventListener('mouseover', toggleLeftPanel)
 maoyeedy.addEventListener('mouseout', toggleLeftPanel)
 redButton.addEventListener('mouseover', toggleRightPanel)
@@ -68,21 +74,11 @@ leftTrigger.addEventListener('mouseout', toggleLeftPanel)
 rightTrigger.addEventListener('mouseover', toggleRightPanel)
 rightTrigger.addEventListener('mouseout', toggleRightPanel)
 
-setTimeout(loadDeferContent, 1500)
-
 // Function
-const clickableElement = document.getElementById('more')
-const textLayerElement = clickableElement.querySelector('.text-layer')
-
-textLayerElement.textContent = 'More'
-clickableElement.href = '#line3'
-
-clickableElement.addEventListener('click', function () {
-  if (textLayerElement.textContent !== 'More') {
-    textLayerElement.textContent = 'More'
-    clickableElement.href = '#line1'
-  } else {
-    textLayerElement.textContent = 'Back To Top'
-    clickableElement.href = '#line3'
-  }
-})
+setTimeout(loadDeferContent, 1500)
+function loadDeferContent () {
+  const images = document.querySelectorAll('.defer img')
+  images.forEach(img => {
+    img.src = img.dataset.src
+  })
+}
