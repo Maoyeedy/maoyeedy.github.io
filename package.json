@@ -11,10 +11,15 @@
 		"uglifyjs-folder": "^3.2.0"
 	},
 	"scripts": {
-		"stylelint": "stylelint *.scss",
+		"stylelint": "standard | snazzy && stylelint *.scss",
 		"optimize": "postcss *.scss --replace",
 		"cssnano": "postcss css/*.css --use cssnano --no-map --replace",
 		"uglifyjs": "uglifyjs-folder js -x .js -eo js --config-file ./uglify.json",
 		"uglifylib": "uglifyjs-folder lib -x .js -eo lib --config-file ./uglify.json"
+	},
+	"standard": {
+		"ignore": [
+			"/lib/"
+		]
 	}
 }
