@@ -42,14 +42,20 @@ video {
     object-fit: cover;
     border-radius: 1rem;
     filter: drop-shadow(0 0.15rem 0.6rem rgba(0, 0, 0, 0.1));
-    transition-property: transform, filter;
+    transition-property: transform, filter, opacity;
 
+    // opacity: 0;
+    // transform: translateY(10%);
+    // &.show {
+    //     opacity: 1;
+    //     transform: translateY(0);
+    // }
     &:not(.fullscreen) {
-        transition-duration: 0.2s;
+        transition-duration: 0.25s;
 
         &:hover {
             transition-duration: 0.4s;
-            transform: scale(1.02);
+            transform: scale(1.025);
             filter: drop-shadow(0 0.15rem 0.6rem rgba(0, 0, 0, 0.2));
 
             &.ultrawide {
