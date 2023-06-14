@@ -16,7 +16,7 @@
 		"lint": "standard | snazzy && stylelint *.scss",
 		"optimize": "postcss *.scss --replace",
 		"cssnano": "postcss css/*.css --use cssnano --no-map --replace",
-		"uglifyjs": "uglifyjs-folder js -x .js -eo js --config-file ./uglify.json",
+		"uglifyjs": "uglifyjs-folder js -x .js -eo build --config-file ./uglify.json",
 		"uglifylib": "uglifyjs-folder lib -x .js -eo lib --config-file ./uglify.json"
 	},
 	"standard": {
