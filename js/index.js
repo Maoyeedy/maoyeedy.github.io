@@ -70,16 +70,15 @@ rightTrigger.addEventListener('mouseout', toggleRightPanel)
 
 setTimeout(loadDeferContent, 1500)
 
-//Function
+// Function
 const clickableElement = document.getElementById('more')
 const textLayerElement = clickableElement.querySelector('.text-layer')
-const initialText = textLayerElement.textContent
 
 textLayerElement.textContent = 'More'
 clickableElement.href = '#line3'
 
 clickableElement.addEventListener('click', function () {
-  if (textLayerElement.textContent != 'More') {
+  if (textLayerElement.textContent !== 'More') {
     textLayerElement.textContent = 'More'
     clickableElement.href = '#line1'
   } else {
