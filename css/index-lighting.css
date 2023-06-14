@@ -90,6 +90,9 @@ html {
 .container > img-comparison-slider {
   scroll-snap-align: center;
 }
+.container > img-comparison-slider:last-of-type {
+  scroll-snap-align: none;
+}
 .container > h1 {
   margin: 0;
 }
