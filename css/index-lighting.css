@@ -18,7 +18,7 @@ html {
   height: 100.1vh;
   background-color: black;
   place-items: center;
-  background-image: url("/img/lighting/ideas/14.webp");
+  background-image: url("/img/lighting/ideas/14.avif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -64,7 +64,7 @@ html {
   max-width: 50ch;
   opacity: 0;
   transform: translateY(100%);
-  transition-duration: 0.75s;
+  transition-duration: 0.6s;
   transition-property: opacity, transform;
 }
 .page.show img {

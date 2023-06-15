@@ -2,7 +2,7 @@ body {
     margin: 2em;
     color: white;
     font-family: Barlow, sans-serif;
-    background-image: url("/img/placeholderBG/5.webp");
+    background-image: url("/img/museum/5.avif");
 }
 
 .container-thin {
@@ -21,7 +21,10 @@ body {
     box-shadow: 0 0.25rem 1.5rem rgba(0, 0, 0, 0.12);
     border: 1px solid rgba(255, 255, 255, 0.3);
 
-    >img {
+    img,
+    video {
+        max-width: 100%;
         border-radius: 1rem;
+        background-color: black;
     }
 }

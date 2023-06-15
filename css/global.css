@@ -57,7 +57,7 @@ img {
 }
 
 .fullscreenable img {
-  cursor: pointer;
+  cursor: zoom-in;
 }
 
 audio,
@@ -86,4 +86,6 @@ ul {
 
 li {
   line-height: 1.75;
-}/*# sourceMappingURL=global.css.map */
+}
+
+/*# sourceMappingURL=global.css.map */

@@ -24,10 +24,10 @@ html {
   scroll-snap-align: center;
 }
 .page.homepage {
-  background-image: url("/img/qiyu/1-1.webp");
+  background-image: url("/img/qiyu/1-1.avif");
 }
 .page.page1 {
-  background-image: url("/img/qiyu/2-0.webp");
+  background-image: url("/img/qiyu/2-0.avif");
 }
 .page.page2 {
   background-color: #e7ebee;
