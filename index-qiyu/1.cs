@@ -1,24 +1,71 @@
-using System;
-using System.IO;
+﻿using System;
+using System.Collections;
+using TMPro;
 using UnityEngine;
 
-public class ScreenshotScript : MonoBehaviour
+public class DialogPlayer : MonoBehaviour
 {
-    public string folderPath = Path.Combine(Application.dataPath, "..", "SampleRecordings");
-    public KeyCode captureKey = KeyCode.Tab;
+    public Dialog[] dialogs;
+    public TextMeshProUGUI dialogText, nameText;
+    public float characterInterval = 0.05f, autoNextLineTime = 2.5f;
+    private float _elapsedTime;
+    private int _index;
 
     private void Start()
     {
-        Directory.CreateDirectory(folderPath);
+        dialogText.text = string.Empty;
+        nameText.text = string.Empty;
+        StartCoroutine(TypeLine());
     }
 
     private void Update()
     {
-        if (!Input.GetKeyDown(captureKey)) return;
-        string filename = DateTime.Now.ToString("yyyy.MM.dd-HH.mm.ss") + ".png";
-        string filePath = Path.Combine(folderPath, filename);
+        _elapsedTime += Time.deltaTime;
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Return) || _elapsedTime > autoNextLineTime) SwitchLine();
+    }
 
-        ScreenCapture.CaptureScreenshot(filePath);
-        print("Screenshot saved: " + filePath);
+    private void SwitchLine()
+    {
+         _elapsedTime = 0;
+        if (dialogText.text == dialogs[_index].dialog)
+        {
+            NextLine();
+        }
+        else
+        {
+            StopAllCoroutines();
+            dialogText.text = dialogs[_index].dialog;
+        }
+    }
+
+    private void NextLine()
+    {
+        dialogText.text = string.Empty;
+        if (_index < dialogs.Length - 1)
+        {
+            _index++;
+            StartCoroutine(TypeLine());
+            nameText.text = dialogs[_index].name;
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
+    private IEnumerator TypeLine()
+    {
+        foreach (char x in dialogs[_index].dialog)
+        {
+            dialogText.text += x;
+            yield return new WaitForSeconds(characterInterval);
+        }
+    }
+
+    [Serializable]
+    public struct Dialog
+    {
+        public string name;
+        public string dialog;
     }
 }

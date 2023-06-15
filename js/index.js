@@ -38,7 +38,7 @@ function scrollMain (isDown) {
 function setColor (isDown) {
   circle1.style.backgroundColor = isDown ? '#93969f' : '#ffffff'
   circle2.style.backgroundColor = isDown ? '#ffffff' : '#93969f'
-  isDown ? toggleText2() : toggleText1()
+  toggleText(isDown)
   hasClicked = !hasClicked
 }
 
@@ -51,11 +51,10 @@ clickableElement.addEventListener('click', function () {
   scrollMain(!hasClicked)
 })
 
-function toggleText1 () {
-  textLayerElement.textContent = 'More'
-}
-function toggleText2 () {
-  textLayerElement.textContent = 'Back To Top'
+function toggleText (isDown) {
+  setTimeout(() => {
+    textLayerElement.textContent = isDown ? 'Back To Top' : 'More'
+  }, 1000)
 }
 
 // Function

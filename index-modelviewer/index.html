@@ -52,8 +52,8 @@
   <div class="card card2">
     <model-viewer src="Fish.glb" id="orbit1" interpolation-decay="150" shadow-intensity="0" camera-orbit="0deg 100deg 12m">
       <effect-composer>
-        <color-grade-effect opacity="1" brightness="0.05" contrast="0.1"></color-grade-effect>
-        <outline-effect color="white" opacity="1" strength="5" smoothing="0.5"></outline-effect>
+        <color-grade-effect opacity="1" brightness="0.05" contrast="0.075"></color-grade-effect>
+        <outline-effect color="white" opacity="1" strength="2" smoothing="0.5"></outline-effect>
       </effect-composer>
     </model-viewer>
     <script>
@@ -61,7 +61,7 @@
         const modelViewer = document.getElementById("orbit1")
         const orbitCycle = [
           "-45deg 80deg 12m",
-          "60deg 120deg 1m",
+          "60deg 110deg 1m",
           "0deg 100deg 12m"
         ]
         setInterval(() => {
