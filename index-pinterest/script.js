@@ -9,7 +9,7 @@ document.querySelectorAll('.fullscreenable img, .fullscreenable video').forEach(
 
 document.addEventListener('keydown', event => {
   if (event.key === 'Escape') {
-    let fullscreenElement = document.querySelector('.fullscreen')
+    const fullscreenElement = document.querySelector('.fullscreen')
     if (fullscreenElement) {
       fullscreenElement.classList.remove('fullscreen')
       overlay.classList.remove('show')

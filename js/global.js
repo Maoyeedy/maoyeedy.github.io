@@ -11,5 +11,3 @@ document.addEventListener('DOMContentLoaded', function () {
     anchor.draggable = false
   })
 })
-
-

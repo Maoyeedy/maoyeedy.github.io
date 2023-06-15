@@ -1,22 +1,22 @@
 function extendImagesWithPicture () {
-  let imgElements = document.querySelectorAll("img")
+  const imgElements = document.querySelectorAll('img')
 
   imgElements.forEach(function (img) {
-    let dataSrc = img.getAttribute("data-src")
-    let path = dataSrc.substring(0, dataSrc.lastIndexOf("/") + 1)
-    let imageName = dataSrc.substring(dataSrc.lastIndexOf("/") + 1, dataSrc.lastIndexOf("."))
+    const dataSrc = img.getAttribute('data-src')
+    const path = dataSrc.substring(0, dataSrc.lastIndexOf('/') + 1)
+    const imageName = dataSrc.substring(dataSrc.lastIndexOf('/') + 1, dataSrc.lastIndexOf('.'))
 
-    let picture = document.createElement("picture")
-    let sourceAVIF = document.createElement("source")
-    sourceAVIF.setAttribute("srcset", path + imageName + ".avif")
-    sourceAVIF.setAttribute("type", "image/avif")
+    const picture = document.createElement('picture')
+    const sourceAVIF = document.createElement('source')
+    sourceAVIF.setAttribute('srcset', path + imageName + '.avif')
+    sourceAVIF.setAttribute('type', 'image/avif')
 
-    let sourceWebP = document.createElement("source")
-    sourceWebP.setAttribute("srcset", path + imageName + ".webp")
-    sourceWebP.setAttribute("type", "image/webp")
+    const sourceWebP = document.createElement('source')
+    sourceWebP.setAttribute('srcset', path + imageName + '.webp')
+    sourceWebP.setAttribute('type', 'image/webp')
 
-    let newImg = document.createElement("img")
-    newImg.setAttribute("src", dataSrc)
+    const newImg = document.createElement('img')
+    newImg.setAttribute('src', dataSrc)
 
     picture.appendChild(sourceAVIF)
     picture.appendChild(sourceWebP)

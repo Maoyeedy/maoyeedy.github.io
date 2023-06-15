@@ -22,8 +22,8 @@ img {
 }
 
 body {
-  height: 97.5vh;
-  margin: 2.5vh;
+  height: 97vh;
+  margin: 3vh;
   margin-bottom: 0;
   background-color: #202124;
   color: black;
@@ -65,12 +65,12 @@ body {
 .container {
   display: flex;
   width: 100%;
-  height: 89.5vh;
+  height: 88vh;
 }
 .container #main {
   display: grid;
   width: 100%;
-  gap: 2.5vh;
+  gap: 3vh;
   overflow: hidden auto;
   transition: margin 0.4s;
   scroll-behavior: smooth;
@@ -94,7 +94,7 @@ body {
   width: 20vw;
 }
 .show-left-panel #main {
-  margin-left: 2.5vh;
+  margin-left: 3vh;
 }
 .show-left-panel #littlelink {
   opacity: 1;
@@ -105,7 +105,7 @@ body {
   transition-duration: 0.6s;
 }
 .show-right-panel #main {
-  margin-right: 2.5vh;
+  margin-right: 3vh;
 }
 .show-right-panel #resume {
   opacity: 1;
@@ -115,17 +115,17 @@ body {
 .line {
   display: flex;
   width: 100%;
-  gap: 2.5vh;
+  gap: 3vh;
   scroll-snap-align: end;
 }
 .line > a {
   position: relative;
   width: 100%;
-  height: 43.5vh;
+  height: 42.5vh;
+  background-color: #0b0c0d;
   border-radius: 1.5vh;
   overflow: hidden;
   transition: width 0.4s;
-  background-color: #0b0c0d;
 }
 .line > a > img {
   width: 100%;
@@ -181,14 +181,14 @@ body {
 
 #footer {
   display: flex;
-  height: 8vh;
+  height: 9vh;
   align-items: center;
   justify-content: space-between;
 }
 
 #name {
   color: #93969f;
-  font-size: 3.6vh;
+  font-size: 4.05vh;
   font-weight: bold;
   cursor: pointer;
   line-height: 2.4;
@@ -201,8 +201,8 @@ body {
 
 #red-button {
   display: flex;
-  width: 4vh;
-  height: 4vh;
+  width: 4.5vh;
+  height: 4.5vh;
   background-color: red;
   border-radius: 50%;
   justify-content: center;
@@ -216,8 +216,8 @@ body {
 
 #red-button-placeholder {
   display: flex;
-  width: 4vh;
-  height: 8vh;
+  width: 4.5vh;
+  height: 9vh;
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -231,11 +231,11 @@ body {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0%);
-  gap: 1.5vh;
+  gap: 1.6875vh;
 }
 #circle-group .circle {
-  width: 3vh;
-  height: 3vh;
+  width: 3.375vh;
+  height: 3.375vh;
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.4s;
@@ -251,7 +251,7 @@ body {
 #right-trigger {
   position: fixed;
   top: 0;
-  width: 2.5vh;
+  width: 3vh;
   height: 100vh;
   z-index: -1;
 }
