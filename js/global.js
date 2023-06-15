@@ -10,13 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
     anchor.rel = 'noreferrer noopener'
     anchor.draggable = false
   })
-
-  const images = document.querySelectorAll('.fullscreenable img')
-  images.forEach(image => {
-    image.addEventListener('click', () => {
-      window.open(image.src, '_blank')
-    })
-  })
 })
 
 

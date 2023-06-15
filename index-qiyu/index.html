@@ -19,6 +19,8 @@
     <link rel="icon" href="/img/favicon.webp">
     <link rel="stylesheet" href="/css/global.css">
     <script defer src="/js/global.js"></script>
+    <script defer src="/js/fullscreen.js"></script>
+    <script defer src="/js/Intersect-page.js"></script>
 </head>
 
 <body class="language-cs line-numbers match-braces rainbow-braces no-brace-select">
@@ -48,27 +50,32 @@
         </div>
     </div>
 
-    <div class="img-code">
-        <iframe src="https://www.youtube.com/embed/SgdVi4S9OjQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <div class="right">
-            <h1>Camera Zoom</h1>
-            <p> Zooms the Third-Person-Cam according to their sprinting status, or responds to their mouse scroll input. Utilizes <a href="https://assetstore.unity.com/packages/tools/animation/dotween-hotween-v2-27676">Dotween</a> for a hyper-smooth zoom animation.
-            </p>
-            <pre data-src="1.cs" data-download-link><code id="cs1"></code></pre>
+    <div class="code-showcase">
+        <div style="height: 2rem; scroll-snap-align: start;"></div>
+
+        <div class="img-code" style="scroll-snap-align: none;margin-top: 0;">
+            <iframe src="https://www.youtube.com/embed/SgdVi4S9OjQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="right">
+                <h1>Camera Zoom</h1>
+                <p> Zooms the Third-Person-Cam according to their sprinting status, or responds to their mouse scroll input. Utilizes <a href="https://assetstore.unity.com/packages/tools/animation/dotween-hotween-v2-27676">Dotween</a> for a hyper-smooth zoom animation.
+                </p>
+                <pre data-src="1.cs" data-download-link><code id="cs1"></code></pre>
+            </div>
+        </div>
+
+        <div class="img-code">
+            <img src="/img/qiyu/typewritter.webp">
+            <div class="right">
+                <h1>Typewriter Dialog</h1>
+                <p> 1. Take users' input lines as a string array.
+                    2. Forward the array index by a internal counting time, or by users' mouse click.
+                    3. Split input string into chars.
+                    4. Utilizes <i>IEnumerator</i> to print each char with a minor interval.</p>
+                <pre data-src="2.cs" data-download-link><code id="cs2"></code></pre>
+            </div>
         </div>
     </div>
 
-    <div class="img-code">
-        <img src="/img/qiyu/typewritter.webp">
-        <div class="right">
-            <h1>Typewriter Dialog</h1>
-            <p> 1. Take users' input lines as a string array.
-                2. Forward the array index by a internal counting time, or by users' mouse click.
-                3. Split input string into chars.
-                4. Utilizes <i>IEnumerator</i> to print each char with a minor interval.</p>
-            <pre data-src="2.cs" data-download-link><code id="cs2"></code></pre>
-        </div>
-    </div>
 </body>
 
 </html>

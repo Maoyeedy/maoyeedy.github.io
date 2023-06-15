@@ -11,7 +11,7 @@ html {
 
 .page {
   width: 100%;
-  height: 100vh;
+  height: 100.1vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -22,6 +22,20 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   scroll-snap-align: center;
+}
+.page.homepage {
+  background-image: url("/img/qiyu/1-1.webp");
+}
+.page.page1 {
+  background-image: url("/img/qiyu/2-3.webp");
+}
+.page.show .img-grid {
+  transform: translateY(0);
+  opacity: 1;
+}
+.page.show .text {
+  transform: translateY(0);
+  opacity: 1;
 }
 .page .img-grid {
   width: 90vw;
@@ -34,6 +48,10 @@ html {
   border-radius: 3rem;
   filter: drop-shadow(0 0.15rem 0.6rem rgba(0, 0, 0, 0.1));
   z-index: 1;
+  transform: translateY(75%);
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition-duration: 0.4s;
 }
 .page .img-grid img {
   flex: 1;
@@ -53,6 +71,10 @@ html {
   border-radius: 2rem;
   filter: drop-shadow(0 0.15rem 0.6rem rgba(0, 0, 0, 0.1));
   z-index: 1;
+  transform: translateY(100%);
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition-duration: 0.5s;
 }
 .page .text h1 {
   margin-bottom: 1rem;
@@ -72,12 +94,6 @@ html {
   backdrop-filter: blur(4px);
   z-index: 0;
 }
-.page.homepage {
-  background-image: url("/img/qiyu/1-1.webp");
-}
-.page.page1 {
-  background-image: url("/img/qiyu/2-3.webp");
-}
 
 .img-code {
   display: grid;
@@ -89,7 +105,7 @@ html {
   gap: 2em;
   border-radius: 2em;
   grid-template-columns: auto 1fr;
-  scroll-snap-align: center;
+  scroll-snap-align: start;
 }
 .img-code .right {
   display: flex;
