@@ -1,6 +1,20 @@
 $background-color: rgba(0, 0, 0, 0.8);
 $duration1: 0.4s;
 
+@mixin show-animation($duration: $duration1) {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    transition: transform $duration, opacity $duration;
+}
+
+@mixin hide-animation($duration: $duration1, $translateY: 75%) {
+    transform: translateY($translateY);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform $duration, opacity $duration;
+}
+
 body {
     margin: 0;
     background-color: aliceblue;
@@ -31,22 +45,35 @@ html {
     }
 
     &.page1 {
-        background-image: url('/img/qiyu/2-3.webp');
+        background-image: url('/img/qiyu/2-0.webp');
+    }
+
+    &.page2 {
+        // background-image: url('/img/qiyu/3-header-sea-ice-sloshing.webp');
+        background-color: #e7ebee;
+    }
+
+    &.page3 {
+        background-color: black;
+
+        .img-grid,
+        .text {
+            background-color: #1d2021;
+        }
     }
 
     &.show {
         .img-grid {
-            transform: translateY(0);
-            opacity: 1;
+            @include show-animation;
         }
 
         .text {
-            transform: translateY(0);
-            opacity: 1;
+            @include show-animation($duration: $duration1 * 1.25);
         }
     }
 
     .img-grid {
+        @include hide-animation;
         width: 90vw;
         display: flex;
         justify-content: space-between;
@@ -57,10 +84,6 @@ html {
         border-radius: 3rem;
         filter: drop-shadow(0 0.15rem 0.6rem rgba(0, 0, 0, 0.1));
         z-index: 1;
-        transform: translateY(75%);
-        opacity: 0;
-        transition-property: transform, opacity;
-        transition-duration: $duration1;
 
         img {
             flex: 1;
@@ -77,6 +100,7 @@ html {
     }
 
     .text {
+        @include hide-animation($duration: $duration1 * 1.25, $translateY: 100%);
         background-color: $background-color;
         padding: 2rem;
         margin-top: 2rem;
@@ -90,7 +114,15 @@ html {
 
         h3 {
             font-weight: normal;
-            margin-bottom: 1.5rem;
+            margin-bottom: 0;
+        }
+
+        ul {
+            margin-top: 0.75rem;
+        }
+
+        :not(:first-of-type)>h3 {
+            margin: 0;
         }
 
         transform: translateY(100%);
@@ -98,6 +130,7 @@ html {
         transition-property: transform,
         opacity;
         transition-duration: $duration1 * 1.25;
+        visibility: hidden;
     }
 
     .overlay {
@@ -119,11 +152,11 @@ html {
     padding: 2em;
     margin: 2em auto;
     background-color: black;
-    max-width: 72em;
+    max-width: 66em;
     gap: 2em;
     border-radius: 2em;
     grid-template-columns: auto 1fr;
-    scroll-snap-align: start;
+    scroll-snap-align: center;
 
     .right {
         display: flex;
@@ -167,5 +200,16 @@ html {
         border-radius: 1em;
         object-fit: cover;
         object-fit: contain;
+    }
+}
+
+footer {
+    color: black;
+    scroll-snap-align: end;
+    text-align: center;
+    padding-bottom: 2rem;
+
+    ul {
+        list-style-type: none;
     }
 }
