@@ -1,13 +1,18 @@
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show')
-    }
-    else {
-      entry.target.classList.remove('show')
-    }
+const overlay = document.getElementById('fullscreen-overlay')
+
+document.querySelectorAll('.fullscreenable img, .fullscreenable video').forEach(element => {
+  element.addEventListener('click', () => {
+    element.classList.toggle('fullscreen')
+    overlay.classList.toggle('show')
   })
 })
 
-const img = document.querySelectorAll('img, video')
-img.forEach((el) => observer.observe(el))
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') {
+    let fullscreenElement = document.querySelector('.fullscreen')
+    if (fullscreenElement) {
+      fullscreenElement.classList.remove('fullscreen')
+      overlay.classList.remove('show')
+    }
+  }
+})
