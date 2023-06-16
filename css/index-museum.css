@@ -22,7 +22,8 @@ body {
 }
 .container-thin img,
 .container-thin video {
-  max-width: 100%;
   border-radius: 1rem;
   background-color: black;
+  width: 484px;
+  min-height: 363px;
 }/*# sourceMappingURL=index-museum.css.map */
