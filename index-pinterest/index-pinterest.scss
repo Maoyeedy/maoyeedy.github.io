@@ -80,6 +80,7 @@ video {
         transition-duration: 0s;
         cursor: zoom-out;
         filter: drop-shadow(0 0.2rem 1rem rgba(0, 0, 0, 0.1));
+        border: 1px solid #fff;
 
         &.ultrawide {
             width: 95vw;
