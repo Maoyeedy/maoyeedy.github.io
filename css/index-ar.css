@@ -28,5 +28,14 @@ body {
   min-height: 242px;
 }
 .container-thin iframe {
-  margin: 1rem 0;
+  margin-top: 1rem;
+  border: 0;
+  border-radius: 1rem;
+}
+.container-thin hr {
+  margin-top: 0.5rem;
+}
+.container-thin .fade {
+  font-style: italic;
+  color: #999;
 }/*# sourceMappingURL=index-ar.css.map */

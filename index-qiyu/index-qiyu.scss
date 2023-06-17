@@ -156,7 +156,8 @@ html {
     gap: 2em;
     border-radius: 2em;
     grid-template-columns: auto 1fr;
-    scroll-snap-align: center;
+    scroll-snap-align: none;
+    margin-top: 0;
 
     .right {
         display: flex;
