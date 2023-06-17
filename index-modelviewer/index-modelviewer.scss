@@ -1,7 +1,7 @@
 body {
     margin: 2rem;
-    font-family: Barlow, sans-serif;
     color: #244376;
+    font-family: Barlow, sans-serif;
 }
 
 .card {
@@ -33,12 +33,12 @@ body {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            align-items: end;
+            align-items: flex-end;
         }
 
         h1 {
-            font-size: 2rem;
             margin-bottom: 0.5rem;
+            font-size: 2rem;
         }
 
         span {

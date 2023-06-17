@@ -1,1 +1,74 @@
-body{color:#244376;font-family:Barlow,sans-serif;margin:2rem}.card{border-radius:1rem;box-shadow:0 .12rem .6rem #0000003d;display:flex;flex-direction:column;margin:2rem auto;max-width:600px;overflow:hidden;visibility:hidden}.card.show{visibility:visible}.card>model-viewer{--poster-color:#fff0;background-color:#000;height:350px;width:100%}.card .attribution{color:#000;padding:1em}.card .attribution>div{align-items:end;display:flex;flex-direction:row;justify-content:space-between}.card .attribution h1{font-size:2rem;margin-bottom:.5rem}.card .attribution span{line-height:1.5}.card.card1>model-viewer{background-color:#7b68ee}.card.card1 .attribution{color:#0e0449}.card.card2>model-viewer{background-color:#a3ddfa}.card.card3>model-viewer{background-color:#04d2fb}footer{display:flex;flex-direction:column;font-style:italic;line-height:1.5;margin:2rem auto;max-width:600px;text-align:center}
+body {
+    color: #244376;
+    font-family: Barlow, sans-serif;
+    margin: 2rem
+}
+
+.card {
+    border-radius: 1rem;
+    box-shadow: 0 .12rem .6rem #0000003d;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto;
+    max-width: 600px;
+    overflow: hidden;
+    visibility: hidden
+}
+
+.card.show {
+    visibility: visible
+}
+
+.card > model-viewer {
+    --poster-color: #fff0;
+    background-color: #000;
+    height: 350px;
+    width: 100%
+}
+
+.card .attribution {
+    color: #000;
+    padding: 1em
+}
+
+.card .attribution > div {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.card .attribution h1 {
+    font-size: 2rem;
+    margin-bottom: .5rem
+}
+
+.card .attribution span {
+    line-height: 1.5
+}
+
+.card.card1 > model-viewer {
+    background-color: #7b68ee
+}
+
+.card.card1 .attribution {
+    color: #0e0449
+}
+
+.card.card2 > model-viewer {
+    background-color: #a3ddfa
+}
+
+.card.card3 > model-viewer {
+    background-color: #04d2fb
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    font-style: italic;
+    line-height: 1.5;
+    margin: 2rem auto;
+    max-width: 600px;
+    text-align: center
+}

@@ -22,10 +22,10 @@ body {
 
     img,
     video {
+        width: 484px;
+        background-color: black;
         // max-width: 100%;
         border-radius: 1rem;
-        background-color: black;
-        width: 484px;
         min-height: 242px;
     }
 
@@ -40,7 +40,7 @@ body {
     }
 
     .fade {
-        font-style: italic;
         color: #999;
+        font-style: italic;
     }
 }

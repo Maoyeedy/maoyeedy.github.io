@@ -1,416 +1,462 @@
 ::selection {
-  background: red;
-  color: white;
-  text-shadow: none;
+    background: red;
+    color: #fff;
+    text-shadow: none
 }
 
 * {
-  scrollbar-width: none;
-  box-sizing: border-box;
+    box-sizing: border-box;
+    scrollbar-width: none
 }
 
 ::-webkit-scrollbar {
-  width: 0;
-  height: 0;
+    height: 0;
+    width: 0
 }
 
 img {
-  -webkit-user-select: none;
-  user-select: none;
-  max-width: 100%;
-  object-fit: cover;
+    max-width: 100%;
+    object-fit: cover;
+    -webkit-user-select: none;
+    user-select: none
 }
 
 body {
-  height: 97vh;
-  margin: 3vh;
-  margin-bottom: 0;
-  background-color: #202124;
-  color: black;
-  font-family: Barlow, sans-serif;
+    background-color: #202124;
+    color: #000;
+    font-family: Barlow, sans-serif;
+    height: 97vh;
+    margin: 3vh 3vh 0
 }
 
 #warning {
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  z-index: 10001;
-  align-items: center;
-  justify-content: center;
-  animation: fade 0.75s ease-out 0.75s forwards;
-  -webkit-user-select: none;
-  user-select: none;
+    align-items: center;
+    animation: fade .75s ease-out .75s forwards;
+    background-color: #000;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    -webkit-user-select: none;
+    user-select: none;
+    width: 100%;
+    z-index: 10001
 }
+
 #warning p {
-  color: white;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  font-size: 1.5rem;
-  text-align: center;
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+    font-size: 1.5rem;
+    text-align: center
 }
 
 @keyframes fade {
-  from {
-    opacity: 1;
-    visibility: visible;
-  }
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
+    0% {
+        opacity: 1;
+        visibility: visible
+    }
+
+    to {
+        opacity: 0;
+        visibility: hidden
+    }
 }
+
 .container {
-  display: flex;
-  width: 100%;
-  height: 88vh;
+    display: flex;
+    height: 88vh;
+    width: 100%
 }
+
 .container #main {
-  display: grid;
-  width: 100%;
-  gap: 3vh;
-  overflow: hidden auto;
-  transition: margin 0.4s;
-  scroll-behavior: smooth;
-  scroll-snap-type: block mandatory;
+    display: grid;
+    gap: 3vh;
+    overflow: hidden auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: block mandatory;
+    transition: margin .4s;
+    width: 100%
 }
 
 .panel {
-  display: flex;
-  width: 0;
-  transition-property: width;
-  transition-duration: 0.4s;
-  z-index: 102;
+    display: flex;
+    transition-duration: .4s;
+    transition-property: width;
+    width: 0;
+    z-index: 102
 }
+
 .panel > .fill {
-  width: 100%;
-  border-radius: 1.5vh;
-  overflow: hidden auto;
+    border-radius: 1.5vh;
+    overflow: hidden auto;
+    width: 100%
 }
 
 .show-left-panel #left {
-  width: 20vw;
+    width: 20vw
 }
+
 .show-left-panel #main {
-  margin-left: 3vh;
+    margin-left: 3vh
 }
+
 .show-left-panel #littlelink {
-  opacity: 1;
+    opacity: 1
 }
 
 .show-right-panel #right {
-  width: 40vw;
-  transition-duration: 0.6s;
+    transition-duration: .6s;
+    width: 40vw
 }
+
 .show-right-panel #main {
-  margin-right: 3vh;
+    margin-right: 3vh
 }
+
 .show-right-panel #resume {
-  opacity: 1;
-  transition-duration: 0.7s;
+    opacity: 1;
+    transition-duration: .7s
 }
 
 .line {
-  display: flex;
-  width: 100%;
-  gap: 3vh;
-  scroll-snap-align: end;
+    display: flex;
+    gap: 3vh;
+    scroll-snap-align: end;
+    width: 100%
 }
+
 .line > a {
-  position: relative;
-  width: 100%;
-  height: 42.5vh;
-  background-color: #0b0c0d;
-  border-radius: 1.5vh;
-  overflow: hidden;
-  transition: width 0.4s;
+    background-color: #0b0c0d;
+    border-radius: 1.5vh;
+    height: 42.5vh;
+    overflow: hidden;
+    position: relative;
+    transition: width .4s;
+    width: 100%
 }
+
 .line > a > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 99;
-  transition: transform 0.4s;
-  transform: scale(1.1);
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    transition: transform .4s;
+    width: 100%;
+    z-index: 99
 }
+
 .line > a > .layer {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  z-index: 100;
-  transition: opacity 0.6s;
-  opacity: 0;
+    background-color: #000;
+    z-index: 100
 }
+
+.line > a > .layer,
 .line > a > .text-layer {
-  display: flex;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  color: white;
-  font-size: 2.2rem;
-  font-weight: bold;
-  justify-content: center;
-  align-items: center;
-  z-index: 101;
-  transition: opacity 0.6s;
-  opacity: 0;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    transition: opacity .6s;
+    width: 100%
 }
+
+.line > a > .text-layer {
+    align-items: center;
+    color: #fff;
+    display: flex;
+    font-size: 2.2rem;
+    font-weight: 700;
+    justify-content: center;
+    z-index: 101
+}
+
 .line > a:hover > img {
-  transform: scale(1);
+    transform: scale(1)
 }
+
 .line > a:hover > .layer {
-  opacity: 0.4;
-  transition-duration: 0.8s;
+    opacity: .4;
+    transition-duration: .8s
 }
+
 .line > a:hover > .text-layer {
-  opacity: 1;
-  transition-duration: 0.8s;
+    opacity: 1;
+    transition-duration: .8s
 }
+
 .line#line1 > a:hover {
-  width: 185%;
+    width: 185%
 }
+
 .line#line2 > a:hover {
-  width: 125%;
+    width: 125%
 }
+
 .line#line3 > a:hover {
-  width: 100%;
+    width: 100%
 }
 
 #footer {
-  display: flex;
-  height: 9vh;
-  align-items: center;
-  justify-content: space-between;
+    align-items: center;
+    display: flex;
+    height: 9vh;
+    justify-content: space-between
 }
 
 #name {
-  color: #93969f;
-  font-size: 4.05vh;
-  font-weight: bold;
-  cursor: pointer;
-  line-height: 2.4;
-  transform: translateY(-2px);
-  transition: color 0.4s;
+    color: #93969f;
+    cursor: pointer;
+    font-size: 4.05vh;
+    font-weight: 700;
+    line-height: 2.4;
+    transform: translateY(-2px);
+    transition: color .4s
 }
+
 #name:hover {
-  color: white;
+    color: #fff
 }
 
 #red-button {
-  display: flex;
-  width: 4.5vh;
-  height: 4.5vh;
-  background-color: red;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.6s;
+    align-items: center;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    height: 4.5vh;
+    justify-content: center;
+    transition: background-color .6s;
+    width: 4.5vh
 }
+
 #red-button > img {
-  width: 70%;
-  transform: translate(-0.5px, -0.5px);
+    transform: translate(-.5px, -.5px);
+    width: 70%
 }
 
 #red-button-placeholder {
-  display: flex;
-  width: 4.5vh;
-  height: 9vh;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    height: 9vh;
+    justify-content: center;
+    width: 4.5vh
 }
+
 #red-button-placeholder:hover > #red-button {
-  background-color: black;
+    background-color: #000
 }
 
 #circle-group {
-  display: flex;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  gap: 1.6875vh;
+    display: flex;
+    gap: 1.6875vh;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%)
 }
+
 #circle-group .circle {
-  width: 3.375vh;
-  height: 3.375vh;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.4s;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 3.375vh;
+    transition: background-color .4s;
+    width: 3.375vh
 }
+
 #circle-group #circle1 {
-  background-color: white;
+    background-color: #fff
 }
+
 #circle-group #circle2 {
-  background-color: #93969f;
+    background-color: #93969f
 }
 
 #left-trigger,
 #right-trigger {
-  position: fixed;
-  top: 0;
-  width: 3vh;
-  height: 100vh;
-  z-index: -1;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    width: 3vh;
+    z-index: -1
 }
 
 #left-trigger {
-  left: 0;
+    left: 0
 }
 
 #right-trigger {
-  right: 0;
+    right: 0
 }
 
-/* stylelint-disable-next-line no-descending-specificity */
 #resume {
-  width: 40vw;
-  padding: 1.2rem;
-  padding-top: 0.4rem;
-  background-color: white;
-  color: #0a0d0f;
-  transition: opacity ease 0.3s;
-  opacity: 0;
-  line-height: 1.75;
+    background-color: #fff;
+    color: #0a0d0f;
+    line-height: 1.75;
+    opacity: 0;
+    padding: .4rem 1.2rem 1.2rem;
+    transition: opacity .3s ease;
+    width: 40vw
 }
+
 #resume h1 {
-  margin: 0;
-  font-size: 2rem;
+    font-size: 2rem;
+    margin: 0
 }
+
 #resume h2 {
-  margin: 0;
-  line-height: 1;
+    line-height: 1;
+    margin: 0
 }
+
 #resume p {
-  margin: 0;
+    margin: 0
 }
+
 #resume #contact,
 #resume h1,
 #resume h2 {
-  text-align: center;
-  justify-content: center;
-}
-#resume hr {
-  height: 1px;
-  height: 0;
-  margin: 1rem 0;
-  margin-top: 0;
-  background-color: #b9c0c6;
-  border: none;
-}
-#resume hr:first-of-type {
-  height: 1px;
-  margin-top: 1rem;
-}
-#resume ul {
-  margin: 0;
-  margin-left: 1rem;
-  padding: 0;
-  white-space: normal;
-}
-#resume #contact {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-#resume #contact p {
-  line-height: 1;
-}
-#resume #contact img {
-  width: 12px;
-  height: 12px;
-  margin-right: 4px;
-  transform: translate(0, 1px);
-  -webkit-user-select: none;
-  user-select: none;
-}
-#resume .wrapper {
-  margin-top: 0.75rem;
-  padding: 0.75rem;
-  padding-top: 0.5rem;
-  background-color: aliceblue;
-  border-radius: 1rem;
-}
-#resume .wrapper ul {
-  margin-top: 0.25rem;
-}
-#resume #skills {
-  margin-top: 0;
-}
-#resume .justified {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+    justify-content: center;
+    text-align: center
 }
 
-/* stylelint-disable-next-line no-descending-specificity */
+#resume hr {
+    background-color: #b9c0c6;
+    border: none;
+    height: 1px;
+    height: 0;
+    margin: 0 0 1rem
+}
+
+#resume hr:first-of-type {
+    height: 1px;
+    margin-top: 1rem
+}
+
+#resume ul {
+    margin: 0 0 0 1rem;
+    padding: 0;
+    white-space: normal
+}
+
+#resume #contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px
+}
+
+#resume #contact p {
+    line-height: 1
+}
+
+#resume #contact img {
+    height: 12px;
+    margin-right: 4px;
+    transform: translateY(1px);
+    -webkit-user-select: none;
+    user-select: none;
+    width: 12px
+}
+
+#resume .wrapper {
+    background-color: #f0f8ff;
+    border-radius: 1rem;
+    margin-top: .75rem;
+    padding: .5rem .75rem .75rem
+}
+
+#resume .wrapper ul {
+    margin-top: .25rem
+}
+
+#resume #skills {
+    margin-top: 0
+}
+
+#resume .justified {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+
 #littlelink {
-  display: flex;
-  width: 20vw;
-  padding: 1.2rem;
-  background-color: white;
-  transition: opacity ease 0.3s;
-  opacity: 0;
-  overflow: hidden auto;
-  flex-direction: column;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    overflow: hidden auto;
+    padding: 1.2rem;
+    transition: opacity .3s ease;
+    width: 20vw
 }
+
 #littlelink > h2 {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
+    margin-bottom: .75rem;
+    margin-top: .75rem
 }
+
 #littlelink > .avatar {
-  width: 8vw;
-  height: 8vw;
-  margin-bottom: 0.75rem;
-  object-fit: cover;
-  background-position: center;
-  border-radius: 50%;
+    background-position: 50%;
+    border-radius: 50%;
+    height: 8vw;
+    margin-bottom: .75rem;
+    object-fit: cover;
+    width: 8vw
 }
+
 #littlelink > .button {
-  display: inline-block;
-  width: 100%;
-  height: 3rem;
-  margin-bottom: 1rem;
-  color: #fff;
-  line-height: 3rem;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  text-align: center;
+    border-radius: .5rem;
+    color: #fff;
+    display: inline-block;
+    height: 3rem;
+    line-height: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-decoration: none;
+    width: 100%
 }
+
 #littlelink > .button:last-child {
-  margin: 0;
+    margin: 0
 }
-#littlelink > .button:hover, #littlelink > .button:focus {
-  filter: brightness(90%);
+
+#littlelink > .button:focus,
+#littlelink > .button:hover {
+    filter: brightness(90%)
 }
+
 #littlelink > .button.button-game {
-  background-color: #6637e8;
+    background-color: #6637e8
 }
-#littlelink > .button.button-blog, #littlelink > .button.button-instagram {
-  background-image: linear-gradient(-135deg, #f58529, #dd2a7b, #515bd4);
+
+#littlelink > .button.button-blog,
+#littlelink > .button.button-instagram {
+    background-image: linear-gradient(-135deg, #f58529, #dd2a7b, #515bd4)
 }
+
 #littlelink > .button.button-github {
-  background-color: #171515;
+    background-color: #171515
 }
+
 #littlelink > .button.button-pinterest {
-  background-color: #ffebed;
-  color: black !important;
+    background-color: #ffebed;
+    color: #000 !important
 }
+
 #littlelink > .button.button-behance {
-  background-color: #1769ff;
+    background-color: #1769ff
 }
+
 #littlelink > .button.button-line {
-  background-color: #06c755;
+    background-color: #06c755
 }
+
 #littlelink > .button.button-mail {
-  background-color: #e53626;
+    background-color: #e53626
 }
+
 #littlelink .icon {
-  width: 20px;
-  height: 20px;
-  padding: 0 6px 3px 0;
-  box-sizing: content-box;
-  vertical-align: middle;
-}/*# sourceMappingURL=index.css.map */
+    box-sizing: initial;
+    height: 20px;
+    padding: 0 6px 3px 0;
+    vertical-align: middle;
+    width: 20px
+}

@@ -92,8 +92,8 @@ html {
     max-width: 900px;
 
     &>p {
-        scroll-snap-align: start;
         padding-top: 2rem;
+        scroll-snap-align: start;
         max-width: 45ch;
     }
 
@@ -110,7 +110,7 @@ html {
     }
 
     &>ul {
-        scroll-snap-align: end;
         padding-bottom: 2rem;
+        scroll-snap-align: end;
     }
 }

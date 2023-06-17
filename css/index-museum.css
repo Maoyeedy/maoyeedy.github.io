@@ -1,29 +1,30 @@
 body {
-  margin: 2em;
-  color: white;
-  font-family: Barlow, sans-serif;
-  background-image: url("/img/museum/bg.avif");
+    background-image: url(/img/museum/bg.avif);
+    color: #fff;
+    font-family: Barlow, sans-serif;
+    margin: 2em
 }
 
 .container-thin {
-  display: grid;
-  margin: auto;
-  padding: 2rem;
-  background: hsla(0, 80%, 50%, 0.25);
-  background: rgba(255, 255, 255, 0.2);
-  max-width: 550px;
-  align-items: center;
-  gap: 1rem;
-  border-radius: 2rem;
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 0.25rem 1.5rem rgba(0, 0, 0, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+    align-items: center;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    background: #e61a1a40;
+    background: #fff3;
+    border: 1px solid #ffffff4d;
+    border-radius: 2rem;
+    box-shadow: 0 .25rem 1.5rem #0000001f;
+    display: grid;
+    gap: 1rem;
+    margin: auto;
+    max-width: 550px;
+    padding: 2rem
 }
+
 .container-thin img,
 .container-thin video {
-  border-radius: 1rem;
-  background-color: black;
-  width: 484px;
-  min-height: 363px;
-}/*# sourceMappingURL=index-museum.css.map */
+    background-color: #000;
+    border-radius: 1rem;
+    min-height: 363px;
+    width: 484px
+}
