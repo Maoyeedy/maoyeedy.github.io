@@ -2,15 +2,15 @@
 	"devDependencies": {
 		"autoprefixer": "^10.4.14",
 		"cssnano": "^6.0.1",
-		"postcss": "^8.4.24",
+		"postcss": "^8.4.25",
 		"postcss-cli": "^10.1.0",
 		"postcss-scss": "^4.0.6",
 		"postcss-sorting": "^8.0.2",
 		"snazzy": "^9.0.0",
 		"standard": "^17.1.0",
-		"stylelint": "^15.7.0",
+		"stylelint": "^15.10.1",
 		"stylelint-config-standard-scss": "^9.0.0",
-		"uglifyjs-folder": "^3.2.0"
+		"uglifyjs-folder": "^3.3.0"
 	},
 	"scripts": {
 		"stylelint": "stylelint *.scss",
